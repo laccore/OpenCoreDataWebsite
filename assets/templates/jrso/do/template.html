@@ -1,0 +1,107 @@
+{{define "T"}}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JRSO Digital Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/simple-grid.css">
+  <link rel="stylesheet" href="/css/zc-grid.css">
+
+  <script type="module" src="/js/components/jrso-do.js"></script>
+  <!-- <script type="module" src="/js/components/fcore-sdo.js"></script> -->
+
+
+  <script type="application/ld+json">
+      {{.JSONLD}}
+  </script>
+
+
+		  <!-- leaflet stuff-->
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script>
+
+	  <!-- 
+		  <link rel="stylesheet" href="/common/js/markercluster/dist/MarkerCluster.css" />
+		  <link rel="stylesheet" href="/common/js/markercluster/dist/MarkerCluster.Default.css" />
+		  <script src="/common/js/markercluster/dist/leaflet.markercluster-src.js"></script>
+		   -->
+		<style>
+		  #map{ height: 400px }
+		</style>
+	  
+
+</head>
+<body>
+  <div class="jumbotron" style="background-image: linear-gradient(#7391ff, #625354);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 center">
+          <img style="height:100px" src="/img/logo22small.png">
+          <h3 style="margin:5px;color:white">JRSO Digital Document</h3>
+            <!-- 
+          <div class="img img-logo center"></div>
+          <h1>Simple Grid is a CSS grid for your website.</h1>
+          <h2 class="font-light">Responsive, light, simple.</h2>
+          <a href="simple-grid.zip" download>
+            <button>Download</button>
+          </a>
+            -->
+        </div>
+        <div class="col-12 center">
+          <img src="/img/search.svg" style="height:25px">
+            <input style="font-size:120%"  type="search" id="q" name="q" aria-label="Search for samples">
+            <button id="update">Search</button> 
+            <input id="nn" type="hidden" min="5" max="200" step="5" value="50" />
+            <!--   <div class="img img-website-mock"></div>  -->
+        </div>
+ 
+      </div>
+      <div class="row">
+        <div class="col-2 hidden-sm"></div>
+      </div>
+     </div>
+  </div>
+
+    
+  <div class="body-content">
+    <div style="padding:0px;top:0px" class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- <div id="map"></div> -->
+
+      
+            <!-- <div id="container1"></div> -->
+			      <div id="container2">
+              <csdco-do></csdco-do>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer style="padding-bottom:5px;background-image: linear-gradient(#7391ff, #625354);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <h6 style="color:white">Open Core Data was funded by the National Science Foundation</h6>
+          <h6 style="color:grey">Simple Grid by <a style="color:grey" href="http://zcole.me" target="_blank">Zach Cole</a>
+            Open source under the <a style="color:grey" href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+{{ end }}
