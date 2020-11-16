@@ -4,7 +4,6 @@
 
 * [rclone](https://rclone.org/)
 
-
 CLONE := /home/fils/src/go/bin/rclone
 
 sync-ocdprod:

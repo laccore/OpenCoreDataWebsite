@@ -78,15 +78,17 @@ import './jsonld.min.js';
 
                 var r = content.results.bindings;
 
-//                r.forEach(element => {
-//                    detailsTemplate.push(html`<div> Test : ${element.disurl.value} </div>`);
-//                    detailsTemplate.push(html`<div> Test : ${element.name.value} </div>`);
-//                }
-//                );
+                //                r.forEach(element => {
+                //                    detailsTemplate.push(html`<div> Test : ${element.disurl.value} </div>`);
+                //                    detailsTemplate.push(html`<div> Test : ${element.name.value} </div>`);
+                //                }
+                //                );
                 //
 
+                detailsTemplate.push(html`<p>non looping filled content</p>`);
+
                 r.forEach(element => {
-                detailsTemplate.push(html`<sl-card class="card-footer" style="margin:3px;max-width: 290px;"> \
+                    detailsTemplate.push(html`<sl-card class="card-footer" style="margin:3px;max-width: 290px;"> \
                         ${element.name.value}  \
                         <div slot="footer"> \
                         <sl-button type="primary" pill> \

@@ -6,10 +6,6 @@ import {
 import './jsonld.min.js';
 import { parts } from './lib/render.js';
 
-
-
-
-
 (function () {
     class FCTest extends HTMLElement {
         constructor() {
@@ -28,18 +24,18 @@ import { parts } from './lib/render.js';
                 }
             }
 
-            async function graphcall() {
-
+            async function graphcall(douri) {
                 const detailsTemplate = [];
+                var url = new URL("https://graph.opencoredata.org/blazegraph/namespace/ocd/sparql")
 
-                var url = new URL("https://graph.opencoredata.org/blazegraph/namespace/ocd/sparql"),
+                console.log(douri);
 
-                    params = {
-                        query: `select * 
-                    where {
-                      <https://opencoredata.org/id/csdco/do/d4206ec3bf84f62adccf18092acd17760cbe8f8c012d055479c68f1b2be51e03> ?p ?o
-                                                                                                                              }
-    ` }
+                var params = {
+                    query: `select * 
+                            where {
+                                <https://opencoredata.org/id/csdco/do/d4206ec3bf84f62adccf18092acd17760cbe8f8c012d055479c68f1b2be51e03> ?p ?o 
+                            }
+                ` };
 
                 Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
 
@@ -57,17 +53,57 @@ import { parts } from './lib/render.js';
                     // body: JSON.stringify({ query: 'SELECT * { ?s ?p ?o  } LIMIT 1', format: 'json' })
                 });
 
-                const content = await rawResponse.json();
-                // console.log(content);
+                let content = await rawResponse.json();
 
-                var r = content.results.bindings;
-
+                // var r = content.results.bindings;
                 // console.log(r);
-
-                return "test";
-
+                return (content);
             }
 
+            // GET test
+            async function objectFectch(id) {
+                return fetch(id+".jsonld", {
+                    headers: { 'Accept': 'application/ld+json', },
+                })
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (myJson) {
+                        console.log("=== fdp viewer ===")
+                        console.log(myJson);
+                        // console.log(JSON.stringify(myJson));
+                        // return JSON.stringify(myJson);
+                        return myJson;
+                    });
+            }
+
+            async function objectFectch(id) {
+                return fetch(id+".jsonld", {
+                    headers: { 'Accept': 'application/ld+json', },
+                })
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (myJson) {
+                        console.log("=== fdp viewer ===")
+                        console.log(myJson);
+                        // console.log(JSON.stringify(myJson));
+                        // return JSON.stringify(myJson);
+                        return myJson;
+                    });
+            }
+
+            async function hasPart(set) {
+                const partTemplate = [];
+                partTemplate.push(html`<h3>Data Set (Frictionless Data Package)</h3>`);
+                set.forEach(element => {
+                    partTemplate.push(html`<p>an item </p>`);
+                    console.log("pushing item");
+                }
+                );
+
+                return partTemplate;
+            }
 
             // const compacted = jsonld.compact(obj, context).then(sC, fC);
             const compacted = jsonld.compact(obj, context).then((providers) => {
@@ -103,21 +139,40 @@ import { parts } from './lib/render.js';
 
                 if (jp["https://schema.org/distribution"]["https://schema.org/contentUrl"] == undefined)
                     detailsTemplate.push(html`<div style="margin-top:15px"> No distribution URL available  </div>`);
-                else detailsTemplate.push(html`<div style="margin-top:15px"> <a href='${jp["https://schema.org/distribution"]["https://schema.org/contentUrl"]}' download>Download Data Package</a> </div>`);
+                else detailsTemplate.push(html`<div style="margin-top:15px"> <a href='${jp["https://schema.org/distribution"]["https://schema.org/contentUrl"]}' download>Data Package Metadata</a> </div>`);
 
+// this section does in a second web component
 
-                if (jp["https://schema.org/hasPart"] == undefined)
-                    detailsTemplate.push(html`<div style="margin-top:15px"> No package documents available  </div>`);
-                else {
+                // if (jp["https://schema.org/hasPart"] == undefined)
+                //     detailsTemplate.push(html`<div style="margin-top:15px"> No package documents available  </div>`);
+                // else {
 
-                    var x = graphcall();
-                    console.log(x);
+                //     detailsTemplate.push(html`<div style="margin-top:15px"> Package content links:  </div>`);
+                   
+                    // var p = jp["https://schema.org/hasPart"];
+                    // p.forEach(element =>
+                    //     detailsTemplate.push(html`<div> Document: <a href='${element["https://schema.org/url"]}'>${element["https://schema.org/url"]}</a> </div>`)
 
-                    detailsTemplate.push(html`<div style="margin-top:15px"> Package content links:  </div>`);
-                    var p = jp["https://schema.org/hasPart"];
-                    p.forEach(element =>
-                        detailsTemplate.push(html`<div> Document : <a href='${element["https://schema.org/url"]}'>${element["https://schema.org/url"]}</a> </div>`));
-                }
+                    // );
+
+                    // p.forEach(element =>
+                    // objectFectch(element["https://schema.org/url"]).then((features) => {
+                    //     detailsTemplate.push(html`<div> Document B: ${features}</div>`);
+                    // }));
+
+                    // hasPart(jp["https://schema.org/hasPart"]).then((value) =>{
+                    //     detailsTemplate.push(value);
+                    //     console.log(value);
+                    // });
+
+                    // p.forEach(element =>
+                    //     graphcall(element["https://schema.org/url"]).then(function(value){
+                    //         console.log("success!");
+                    //     }, function(value)  {
+                    //         detailsTemplate.push(html`<div> Document B: ${value}</div>`);
+                    //     }));
+
+                // }
 
                 this.attachShadow({ mode: 'open' });
                 render(detailsTemplate, this.shadowRoot);                // var h =  `<div>${itemTemplates}</div>`;
