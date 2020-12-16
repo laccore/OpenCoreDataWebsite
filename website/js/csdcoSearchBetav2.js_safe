@@ -12,11 +12,7 @@ document.querySelector('#q').addEventListener('keyup', function (e) {
 	}
 });
 
-document.querySelector("#update").addEventListener('click', () => {
-	console.log("query selector");
-	searchActions();
-});
-
+document.querySelector('#update').addEventListener('click', searchActions);
 
 document.addEventListener('readystatechange', () => {
 	console.log("Document Add event listener");
@@ -38,9 +34,7 @@ function stateChangeSearch() {
 
 	// Hack to replace any string like "word+word2" with "word word2"
 	// happens on the form feed
-    // works in CHROME, not in SAFARI
-	//var qupv2 = qup.replace(/(?<=[A-Za-z_0-9])[+](?=[A-Za-z_0-9])/g, ' ');
-    var qupv2 = qup;
+	var qupv2 = qup.replace(/(?<=[A-Za-z_0-9])[+](?=[A-Za-z_0-9])/g, ' ');
 
 	console.log(qupv2);
 
@@ -310,7 +304,7 @@ const showresults = (content) => {
 
 
 		if (getSafe(() => barval[i].name.value)) {
-			headTemplate.push(html` <span style="float:left;margin-left:10px"><a href="${barval[i].s.value}">${barval[i].name.value}</a>
+			headTemplate.push(html` <span style="float:left;margin-left:10px"><a href="${barval[i].s.value}">${barval[i].name.value}</a> 
 			 a ${barval[i].type.value}</span>  <span style="float:right;margin-right:5px"> (score: ${barval[i].score.value}) </span> `);
 		}
 
@@ -320,7 +314,7 @@ const showresults = (content) => {
 
 		// if (getSafe(() => barval[i].s.value)) {
 		// 	var u = barval[i].s.value
-		// 	containerTemplate.push(html`<span>URL: <a target="_blank"
+		// 	containerTemplate.push(html`<span>URL: <a target="_blank" 
 		// 		href="${barval[i].s.value}">${truncate.apply(u, [300, true])}</a> </span> `);
 		// }
 

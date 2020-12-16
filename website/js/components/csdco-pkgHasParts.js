@@ -25,7 +25,7 @@ import { parts } from './lib/render.js';
             }
 
             this.attachShadow({ mode: 'open' });
-            var sr = this.shadowRoot
+            var sr = this.shadowRoot;
 
             function getData(url) {
                 return new Promise((resolve, reject) => {
@@ -33,36 +33,39 @@ import { parts } from './lib/render.js';
                         .then((resp) => resp.json())
                         .then((data) => {
                             //resolve(data)
-                            resolve(jsonld.compact(data, context) )
+                            resolve(jsonld.compact(data, context) );
                     });
                 })
             }
 
             function loadUsers(userUrls, sr) {
-                let userRequests = []
+                let userRequests = [];
 
                 userUrls.forEach(
                     (dataUrl) => {
-                        userRequests.push(getData(dataUrl["https://schema.org/url"] + ".jsonld"))
-                    })
+                        userRequests.push(getData(dataUrl["https://schema.org/url"] + ".jsonld"));
+                    });
 
                 Promise.all(userRequests).then((allUserData) => {
-                    dorender(allUserData, sr)
+                    dorender(allUserData, sr);
                 }
-                )
+                );
             }
 
             function dorender(allUserData, sr) {
-                console.log(allUserData)
+                console.log(allUserData);
                 const detailsTemplate = [];
                 detailsTemplate.push(html`<p>Package Parts</p>`);
 
                 allUserData.forEach(item => {
 
-                    console.log(item["@graph"][1]["https://schema.org/description"])
+                    // console.log(item["@graph"][1]);
+                    detailsTemplate.push(html`<div style="margin-bottom:10px">`);
+                    // see context for why I just use URL below.....  no real reason this to do this  :)
+                    detailsTemplate.push(html`<a target="_blank" href="${item["@graph"][1]["url"]}">${item["@graph"][1]["https://schema.org/name"]}</a> `);
+                    detailsTemplate.push(html`<br>${item["@graph"][1]["https://schema.org/description"]} `);
+                    detailsTemplate.push(html`</div>`);
 
-                    detailsTemplate.push(html`<p> ${item["@graph"][1]["https://schema.org/name"]}</p> `)
-                    detailsTemplate.push(html`<p> ${item["@graph"][1]["https://schema.org/description"]}</p> `)
                     //detailsTemplate.push(html`<p> ${item[0]["@graph"][1]["https://schema.org/description"][0]["@value"]}</p>
             });
 

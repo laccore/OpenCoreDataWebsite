@@ -139,7 +139,9 @@ import { parts } from './lib/render.js';
 
                 if (jp["https://schema.org/distribution"]["https://schema.org/contentUrl"] == undefined)
                     detailsTemplate.push(html`<div style="margin-top:15px"> No distribution URL available  </div>`);
-                else detailsTemplate.push(html`<div style="margin-top:15px"> <a href='${jp["https://schema.org/distribution"]["https://schema.org/contentUrl"]}' download>Data Package Metadata</a> </div>`);
+                else detailsTemplate.push(html`<div style="margin-top:15px">
+                 <a href='${jp["https://schema.org/distribution"]["https://schema.org/contentUrl"]}' download>Data Package Metadata</a> <br>
+                 <a href='${jp["https://schema.org/distribution"]["https://schema.org/contentUrl"]}.zip' download>Data Package (zip)</a> </div>`);
 
 // this section does in a second web component
 
