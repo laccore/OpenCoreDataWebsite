@@ -1,5 +1,11 @@
 #  Open Core Data Readme
 
+## Notes
+
+Made a dev and www for the two different servers.  Would rather not 
+use a git branch since we are looking at two servers for now that would 
+later be merged
+
 ## Tools
 
 * [rclone](https://rclone.org/)
