@@ -1,0 +1,40 @@
+{
+  "name": "ocd-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ocd-website",
+  "author": "Juan David Figueroa",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "bootstrap": "^4.6.0",
+    "gatsby": "^2.26.1",
+    "gatsby-image": "^2.10.0",
+    "gatsby-plugin-google-analytics": "^2.10.0",
+    "gatsby-plugin-manifest": "^2.11.0",
+    "gatsby-plugin-material-ui": "^2.1.10",
+    "gatsby-plugin-mdx": "^1.9.0",
+    "gatsby-plugin-offline": "^3.9.0",
+    "gatsby-plugin-react-helmet": "^3.9.0",
+    "gatsby-plugin-sass": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.13.1",
+    "gatsby-plugin-sitemap": "^2.11.0",
+    "gatsby-source-filesystem": "^2.10.0",
+    "gatsby-transformer-sharp": "^2.11.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "sass": "^1.32.5"
+  }
+}

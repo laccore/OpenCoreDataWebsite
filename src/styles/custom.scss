@@ -1,0 +1,31 @@
+
+/* import the necessary Bootstrap files */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+/* -------begin customization-------- */   
+
+/* simply assign the value */ 
+// Override default variables before the import
+// $body-bg: #f1f1f1;
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'Dosis', sans-serif;
+// font-family: 'Quicksand', sans-serif;
+
+$font-family-sans-serif: 'Ubuntu', "Helvetica Neue", Arial, "Noto Sans", sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$ocd-primary: rgb(240, 219, 33);
+$ocd-secondary: #bb3208;
+
+/* or, use an existing variable */
+$theme-colors: (
+  primary: $ocd-primary,
+  secondary: $ocd-secondary
+);
+
+/* -------end customization-------- */  
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+// @import "bootstrap";
