@@ -1,23 +1,23 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import clsx from 'clsx'
 
 import footerStyles from './footer.module.scss'
+import { Box, Typography } from '@material-ui/core'
 
-const Footer = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    author
-                }
-            }
-        }
-    `)
+import Copyright from '../components/copyright'
+
+const Footer = ({ siteMetadata }) => {
 
     return (
-        <footer className={footerStyles.footer}>
-        {/* <footer> */}
-            <p>Created by {data.site.siteMetadata.author}, © 2019</p>
+        <footer className={clsx(footerStyles.footer)}>
+            <Box py={3} px={1} color={'white.main'} textAlign={'center'}> 
+                <Typography variant="subtitle1" component="h6" align="center">
+                    {siteMetadata.funding}
+                </Typography>
+            </Box>
+            <Box bgcolor={'black.main'} py={1} color={'white.main'} textAlign={'center'}> 
+                <Copyright siteMetadata={siteMetadata}/>
+            </Box>
         </footer>
     )
 }

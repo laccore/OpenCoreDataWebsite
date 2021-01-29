@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "ocd-website",
-    author: "Juan David Figueroa"
+    title: "Open Core Data",
+    author: "OCD",
+    logo: "/ocd-logo.png",
+    funding: "Open Core Data was funded by the National Science Foundation"
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -11,33 +13,15 @@ module.exports = {
         trackingId: "UA-NNNNNNNN-N",
       },
     },
-    "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        
         icon: "src/images/icon.png",
       },
-    },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
     {
       resolve: `gatsby-plugin-material-ui`,
@@ -46,6 +30,68 @@ module.exports = {
           injectFirst: true,
         },
       },
+    },
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: `${__dirname}/src/data/content`,
+      },
+      __key: "content",
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          objects: require.resolve(`${__dirname}/src/layouts/objects.js`),
+          default: require.resolve(`${__dirname}/src/layouts/index.js`),
+        }
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images/`,
+      },
+      __key: "images",
+    },
+    "gatsby-transformer-json",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "config",
+        path: `${__dirname}/src/data/config/`,
+      },
+      __key: "config",
+    },
+    {
+      resolve: `gatsby-transformer-yaml`,
+      options: {
+        typeName: `config`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: `${__dirname}/src/pages/`,
+      },
+      __key: "pages",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `objects`,
+        path: `${__dirname}/src/objects/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/objects`,
+      },
     }
-  ],
+  ]
 };

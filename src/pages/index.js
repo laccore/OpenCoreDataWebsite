@@ -2,20 +2,23 @@ import * as React from "react"
 
 import Layout from '../layouts/index'
 // import Head from '../blocks/head'
-import Button from '@material-ui/core/Button'
+import Container from '@material-ui/core/Container'
+import Box from '@material-ui/core/Box'
 
-// markup
+import { QuerySearchComponents } from '../queries/searchComponents'
+import { SimpleList } from "../components/listComponents"
+
 const IndexPage = () => {
+
+  const searchComponents = QuerySearchComponents()
+
   return (
     <Layout>
-        {/* <Head title="Home" /> */}
-        <main>
-          <h1>Hello.</h1>
-          <h2>I'm JD! Welcome to OCD</h2>
-          <Button>
-            Click Me!
-          </Button>
-        </main>
+        <Container maxWidth={'lg'}>
+          <Box bgcolor={'white.main'} p={0} boxShadow={2}>
+            <SimpleList listItems={(searchComponents.allSearchComponentsJson.edges)} /> 
+          </Box>
+        </Container>
     </Layout>
   )
 }

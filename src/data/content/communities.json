@@ -1,0 +1,14 @@
+[
+    {
+        "name": "community-1",
+        "slug": "/community-",
+        "title": "Community ",
+        "content": "Some cool community"
+    },
+    {
+        "name": "community-2",
+        "slug": "/community-2",
+        "title": "Second Community ",
+        "content": "Some cool community"
+    }
+]

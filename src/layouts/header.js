@@ -1,36 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, useStaticQuery } from "gatsby"
 // import clsx from 'clsx'
 
 import { makeStyles } from '@material-ui/core/styles'
 
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
+import { MemoAppToolbar } from '../components/appToolbar'
+import { MemoAppSearchHead } from '../components/appSearchHead'
 
-const Header = (props) => {
-    
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                title
-                }
-            }
-        }
-    `)
+const Header = ({ siteMetadata, primaryNavigation }) => {
 
     return (
         <>
-            <h1>
-                {data.site.siteMetadata.title}
-            </h1>
+            <MemoAppToolbar menuItems={primaryNavigation} />
+            <MemoAppSearchHead title={siteMetadata.title} />
         </>
     )
 }
 
 Header.propTypes = {
-
+    siteMetadata: PropTypes.object.isRequired,
+    primaryNavigation: PropTypes.array.isRequired
 }
 
 export default Header

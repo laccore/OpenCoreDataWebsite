@@ -1,52 +1,60 @@
-import { createMuiTheme, lighten } from '@material-ui/core/styles';
+import { createMuiTheme, lighten, darken } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
     palette: {
         background: {
             paper: "#f9f9f9",
-            default: "#bbbbbb",
+            default: "#e7e7e7",
         },
         primary: {
-            main: "#178497",
-            light: "#459cab",
-            lighter: lighten("#459cab", 0.02),
-            dark: "#105c69"
+            main: "#8c1d40", // ASU red
+            light: lighten("#8c1d40", 0.02),
+            dark: darken("#8c1d40", 0.02)
         },
         secondary: {
-            main: "#8c1f00",  // earthchem red
-            light: "#a34b33",
-            dark: "#621500"    
+            main: "#ffc627",  // ASU yellow
+            light: lighten("#ffc627", 0.02),
+            dark: darken("#ffc627", 0.02)
         },
         error: {
-            main: "#89211B",
+            main: "#BF3617",
+            light: lighten("#BF3617", 0.02),
+            dark: darken("#BF3617", 0.02)
         },
         warning: {
-            main: "#ffeb3b",
+            main: "#F2AB27",
+            light: lighten("#F2AB27", 0.02),
+            dark: darken("#F2AB27", 0.02)
         },
         info: {
-            main: "#2196f3",
+            main: "#1AD994",
+            light: lighten("#1AD994", 0.02),
+            dark: darken("#1AD994", 0.02)
         },
         success: {
-            main: "#00e676",
+            main: "#7DBF17",
+            light: lighten("#7DBF17", 0.02),
+            dark: darken("#7DBF17", 0.02)
         },
         white: {
             main: '#ffffff',
-            dark: '#f9f9f9',
+            light: lighten("#ffffff", 0.02),
+            dark: darken("#ffffff", 0.02)
         },
         gray: {
             main: '#dddddd',
-            dark: '#bbbbbb',
-            light: '#eeeeee'
+            light: lighten("#dddddd", 0.02),
+            dark: darken("#dddddd", 0.02)
         },
         black: {
-            main: '#444444',
-            light: '#5b5b5b',
-            dark: '#333333',
+            main: '#0D0D0D',
+            light: lighten("#0D0D0D", 0.02),
+            dark: darken("#0D0D0D", 0.02),
             full: '#000000',
         },
         action: {
-            active: lighten("#459cab", 0.5),
-            hover: lighten("#459cab", 0.5),
+            active: lighten("#8c1d40", 0.5),
+            hover: lighten("#8c1d40", 0.5),
             default: "none",
             hoverOpacity: '0.04',
             selected: 'rgba(0, 0, 0, 0.08)',
@@ -120,6 +128,27 @@ const theme = createMuiTheme({
         },
         h3: {
             fontFamily: "'Roboto','Helvetica',sans-serif"
+        },
+        h4: {
+            fontFamily: "'Roboto','Helvetica',sans-serif"
+        },
+        h5: {
+            fontFamily: "'Roboto','Helvetica',sans-serif"
+        },
+        h6: {
+            fontFamily: "'Roboto','Helvetica',sans-serif"
+        },
+        subtitle1: {
+
+        },
+        subtitle2: {
+            
+        },
+        body1: {
+            lineHeight: 1.25
+        },
+        body2: {
+            lineHeight: 1
         }
     }
 });
