@@ -1,5 +1,0 @@
-Sitemap: https://opencoredata.org/sitemap.xml
-
-User-agent: *
-Allow: /
-
