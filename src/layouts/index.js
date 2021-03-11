@@ -16,12 +16,16 @@ import Footer from './footer'
 import { QuerySiteMetadata } from '../queries/siteMetadata'
 import { QueryPrimaryNavigation } from '../queries/primaryNavigation'
 
+import { SearchProvider } from '../contexts/searchContext'
+
 const Layout = (props) => {
     
     const siteMetadata = QuerySiteMetadata()
     const primaryNavigation = QueryPrimaryNavigation()
     
     return (
+
+        <SearchProvider>
         <ThemeProvider theme={theme}>
         <CssBaseline />        
             <>
@@ -33,6 +37,8 @@ const Layout = (props) => {
 
             <Footer siteMetadata={siteMetadata.site.siteMetadata}/>
         </ThemeProvider>
+        </SearchProvider>
+
     )
 }
 

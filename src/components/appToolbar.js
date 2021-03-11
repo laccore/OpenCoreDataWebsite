@@ -19,7 +19,7 @@ export const AppToolbar = ({ menuItems }) => {
     return (
     <>
       <Toolbar className={classes.toolbar}> 
-        <Box p={2} className={''} justifyContent="left">
+        <Box p={1} className={''} justifyContent="left">
           <a href={`/`} className={classes.logo}>
             <MainLogo color={'primary'}/>
           </a>

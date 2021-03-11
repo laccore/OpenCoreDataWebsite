@@ -1,26 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: "Open Core Data",
-    author: "OCD",
-    logo: "/ocd-logo.png",
-    funding: "Open Core Data was funded by the National Science Foundation"
+    title: `Open Core Data`,
+    author: `OCD`,
+    logo: `/ocd-logo-gradient.png`,
+    funding: `Open Core Data was funded by the National Science Foundation`
   },
   plugins: [
-    "gatsby-plugin-sass",
+    `gatsby-plugin-lodash`,
+    `gatsby-plugin-sass`,
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-NNNNNNNN-N",
+        trackingId: `UA-NNNNNNNN-N`,
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-offline",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-manifest`,
       options: {
         
-        icon: "src/images/icon.png",
+        icon: `src/images/ocd-logo-gradient.png`,
       },
     },
     {
@@ -31,14 +32,14 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "content",
+        name: `content`,
         path: `${__dirname}/src/data/pages`,
       },
-      __key: "content",
+      __key: `content`,
     },
     {
       resolve: `gatsby-plugin-mdx`,
@@ -50,21 +51,21 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
+        name: `images`,
         path: `${__dirname}/src/images/`,
       },
-      __key: "images",
+      __key: `images`,
     },
-    "gatsby-transformer-json",
+    `gatsby-transformer-json`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "config",
+        name: `config`,
         path: `${__dirname}/src/data/config/`,
       },
-      __key: "config",
+      __key: `config`,
     },
     {
       resolve: `gatsby-transformer-yaml`,
@@ -73,12 +74,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
+        name: `pages`,
         path: `${__dirname}/src/pages/`,
       },
-      __key: "pages",
+      __key: `pages`,
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -88,7 +89,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-page-creator",
+      resolve: `gatsby-plugin-page-creator`,
       options: {
         path: `${__dirname}/src/objects`,
       },

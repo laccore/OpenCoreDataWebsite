@@ -150,6 +150,14 @@ const theme = createMuiTheme({
         body2: {
             lineHeight: 1
         }
+    },
+    overrides: {
+        MuiButtonBase: {
+            root: {
+                display: 'flex',
+                padding: '0.5em'
+            }
+        }
     }
 });
 

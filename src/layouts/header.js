@@ -7,14 +7,14 @@ import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
 import { MemoAppToolbar } from '../components/appToolbar'
-import { MemoAppSearchHead } from '../components/appSearchHead'
+import { AppSearchHead } from '../components/appSearchHead'
 
 const Header = ({ siteMetadata, primaryNavigation }) => {
 
     return (
         <>
             <MemoAppToolbar menuItems={primaryNavigation} />
-            <MemoAppSearchHead title={siteMetadata.title} />
+            <AppSearchHead title={siteMetadata.title} />
         </>
     )
 }
