@@ -29,43 +29,34 @@ export const AppSearchHead = ({ title } ) => {
   const [ searchOffset, setSearchOffset ] = useState(0);
 
   const onSearchInput = event => {
-    console.log(event.target.value);
     setSearchQuery(event.target.value);
   };
   const onSearchLimit = event => {
-    console.log(event.target.value);
     setSearchLimit(event.target.value);
   };
 
-  const handleSearchInput = () => {
+  const onSearchSubmit = () => {
+    if(!isEmpty(searchQuery)){
+      handleSearchSubmit()
+    }
+  };
+
+  const handleSearchSubmit = () => {
     const query = {
       value: searchQuery,
       limit: searchLimit,
       offset: searchOffset
     }
-    console.log(fetchState)
     
     if(!isEmpty(query.value)){
       const {url, params, body} = defaultSearch(config.testing.api, query)
       fetchData(url, body)
     }
-    
-    console.log(fetchState)
   }
 
   useEffect(() => {
-    handleSearchInput()
-  }, [searchQuery, searchLimit])
-
-  useEffect(() => {
     if(!isEmpty(fetchState.data)){
-      console.log('fetchState: ')
-      console.log(fetchState)
       searchDispatch({ type: 'SET_SEARCH_RESULTS', results: fetchState.data })
-      console.log('fetchState: ')
-      console.log(fetchState)
-      console.log('searchState: ')
-      console.log(searchState)
     }
   }, [fetchState])
 
@@ -76,7 +67,7 @@ export const AppSearchHead = ({ title } ) => {
           <Typography className={classes.heading} variant={'h3'} component={'h1'}>
               { title }
           </Typography>
-          <Box className={classes.inputBox}>
+          <Box classes={{ root: classes.inputBox}}>
             <InputBase
               className={classes.inputBase}
               placeholder={`Search ${title}`}
@@ -84,7 +75,7 @@ export const AppSearchHead = ({ title } ) => {
               fullWidth
               onChange={onSearchInput} />
 
-            <Divider className={classes.divider} orientation="vertical" />
+            {/* <Divider className={classes.divider} orientation="vertical" /> */}
 
             <FormControl classes={{ root: classes.formControl}}>
               <Select
@@ -102,11 +93,13 @@ export const AppSearchHead = ({ title } ) => {
               </Select>
             </FormControl>
             
-            <Divider className={classes.divider} orientation="vertical" />
+            {/* <Divider className={classes.divider} orientation="vertical" /> */}
 
             <IconButton 
-              className={classes.inputButton}
-              aria-label="delete"
+              classes={{ root: classes.iconButton}}
+              color={'primary'}
+              aria-label="search-results-submit"
+              onClick={() => onSearchSubmit()}
             >  
               <SearchIcon />
             </IconButton>

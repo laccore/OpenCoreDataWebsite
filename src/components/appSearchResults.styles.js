@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     list: {
         width: '100%',
-        maxWidth: '80%',
+        // maxWidth: '100%',
         margin: '0 auto',
         padding: '0'
     },

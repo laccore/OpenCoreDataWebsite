@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, lighten } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles(theme => ({
     root: {
@@ -6,12 +6,14 @@ export const useStyles = makeStyles(theme => ({
     },
     inputBox: {
         display: 'flex',
+        flexDirection: 'row',
         width: '100%',
         maxWidth: '480px',
         backgroundColor: theme.palette.white.main,
         borderRadius: `4px`,
         boxShadow: theme.shadows[3],
-        margin: `${theme.spacing(1)}px auto`
+        margin: `${theme.spacing(1)}px auto`,
+        contain: 'content'
     },
     heading: {
         color: theme.palette.white.main,
@@ -24,7 +26,30 @@ export const useStyles = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignContent: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        position: 'relative',
+        '&:after': {
+            background: 'linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(140,29,64,1) 30%, rgba(71,13,31,1) 100%)',
+            width: '100%',
+            height: '100%',
+            content: '',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 0
+        },
+        '&:before': {
+            backgroundImage: 'url(/assets/ocd-bg.jpg)',
+            width: '100%',
+            height: '100%',
+            content: '',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 0
+        }
     },
     search: {
         padding: theme.spacing(1),
@@ -39,7 +64,11 @@ export const useStyles = makeStyles(theme => ({
         flex: 1,
     },
     iconButton: {
-        padding: 10,
+        borderRadius: 0,
+        flexShrink: 2,
+        width: '100%',
+        height: '100%',
+        backgroundColor: lighten(theme.palette.primary.light, 0.75)
     },
     inputFieldBox: {
         backgroundColor: theme.palette.grey[100],
@@ -50,11 +79,17 @@ export const useStyles = makeStyles(theme => ({
         margin: 'auto'
     },
     inputBase: {
-        padding: theme.spacing(1)
+        padding: theme.spacing(1),
+        flexShrink: 1,
+        width: '100%',
+        height: '100%'
     },
     formControl: {
-        width: '80px',
-        padding: theme.spacing(2)
+        // padding: theme.spacing(2),
+        flexShrink: 2,
+        width: '100%',
+        height: '100%',
+        backgroundColor: theme.palette.white.dark
     },
     inputSelect: {
         minWidth: '80px',

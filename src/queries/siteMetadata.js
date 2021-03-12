@@ -8,7 +8,9 @@ export const QuerySiteMetadata = () =>
                 siteMetadata {
                     author
                     title
-                    funding
+                    description
+                    funder
+                    logo
                 }
             }
         }

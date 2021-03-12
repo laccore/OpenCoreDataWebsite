@@ -145,10 +145,10 @@ const theme = createMuiTheme({
             
         },
         body1: {
-            lineHeight: 1.25
+            lineHeight: 1.5
         },
         body2: {
-            lineHeight: 1
+            lineHeight: 1.25
         }
     },
     overrides: {

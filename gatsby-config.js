@@ -3,7 +3,7 @@ module.exports = {
     title: `Open Core Data`,
     author: `OCD`,
     logo: `/ocd-logo-gradient.png`,
-    funding: `Open Core Data was funded by the National Science Foundation`
+    funder: `Open Core Data was funded by the National Science Foundation`
   },
   plugins: [
     `gatsby-plugin-lodash`,
