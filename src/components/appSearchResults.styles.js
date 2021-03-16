@@ -16,5 +16,27 @@ export const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         boxShadow: theme.shadows[1],
         border: '1px solid rgba(0,0,0,0.05)',
-    }
+    },
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100%'
+    },
+    paperModal: {
+        margin: 'auto',
+        borderRadius: '0.5em',
+        backgroundColor: theme.palette.background.paper,        
+        boxShadow: theme.shadows[3],
+        padding: theme.spacing(2, 4, 2),
+        width: '100%',
+        height: '100%',
+        maxWidth: theme.breakpoints.values.sm,
+        maxHeight: '50vmin',
+        overflowY: 'auto',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)'
+    },
 }))

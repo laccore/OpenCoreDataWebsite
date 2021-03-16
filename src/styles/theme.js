@@ -12,9 +12,9 @@ const theme = createMuiTheme({
             dark: darken("#8c1d40", 0.02)
         },
         secondary: {
-            main: "#ffc627",  // ASU yellow
-            light: lighten("#ffc627", 0.02),
-            dark: darken("#ffc627", 0.02)
+            main: "#16348C",  // Square complement, purple (from ASU red)
+            light: lighten("#16348C", 0.02),
+            dark: darken("#16348C", 0.02)
         },
         error: {
             main: "#BF3617",
@@ -155,7 +155,20 @@ const theme = createMuiTheme({
         MuiButtonBase: {
             root: {
                 display: 'flex',
-                padding: '0.5em'
+                padding: '0.5em',
+                '&:hover':{
+                    color: '#f1f1f1'
+                }
+            }
+        },
+        MuiSvgIcon: {
+            root: {
+                '&:hover':{
+                    color: '#f1f1f1'
+                }
+            },
+            colorPrimary: {
+                color: darken("#8c1d40", 0.02)
             }
         }
     }

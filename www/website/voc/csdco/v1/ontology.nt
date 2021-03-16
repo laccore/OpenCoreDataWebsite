@@ -1,0 +1,649 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#range
+<http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# dcat:contactPoint
+<dcat:contactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dcat:contactPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dcat:contactPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Link a dataset to relevant contact information which is provided using VCard [vcard-rdf]." .
+<dcat:contactPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dcat:contactPoint> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dcat:contactPoint> <http://www.w3.org/2000/01/rdf-schema#range> "vcard:Kind" .
+# 
+# dcat:distribution
+<dcat:distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dcat:distribution> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dcat:distribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a dataset to its available distributions." .
+<dcat:distribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dcat:distribution> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dcat:distribution> <http://www.w3.org/2000/01/rdf-schema#range> "dcat:Distribution" .
+# 
+# dcat:frequency
+<dcat:frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dcat:frequency> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dcat:frequency> <http://www.w3.org/2000/01/rdf-schema#comment> "The frequency at which dataset is published." .
+<dcat:frequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dcat:frequency> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dcat:frequency> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dcat:identifier
+<dcat:identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dcat:identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dcat:identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier of the dataset." .
+<dcat:identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dcat:identifier> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dcat:identifier> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dcat:keyword
+<dcat:keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dcat:keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dcat:keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "A keyword or tag describing the dataset." .
+<dcat:keyword> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dcat:keyword> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dcat:keyword> <http://www.w3.org/2000/01/rdf-schema#range> "rdfs:Literal" .
+# 
+# dcat:landingPage
+<dcat:landingPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dcat:landingPage> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dcat:landingPage> <http://www.w3.org/2000/01/rdf-schema#comment> "A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information." .
+<dcat:landingPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dcat:landingPage> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dcat:landingPage> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dcat:language
+<dcat:language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dcat:language> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dcat:language> <http://www.w3.org/2000/01/rdf-schema#comment> "The language of the dataset." .
+<dcat:language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dcat:language> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dcat:language> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dcat:theme
+<dcat:theme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dcat:theme> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dcat:theme> <http://www.w3.org/2000/01/rdf-schema#comment> "The main category of the dataset. A dataset can have multiple themes." .
+<dcat:theme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dcat:theme> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dcat:theme> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dct:description
+<dct:description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dct:description> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dct:description> <http://www.w3.org/2000/01/rdf-schema#comment> "free-text account of the dataset." .
+<dct:description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dct:description> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dct:description> <http://www.w3.org/2000/01/rdf-schema#range> "rdfs:Literal" .
+# 
+# dct:publisher
+<dct:publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dct:publisher> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dct:publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for making the dataset available." .
+<dct:publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dct:publisher> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dct:publisher> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dct:releaseDate
+<dct:releaseDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dct:releaseDate> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dct:releaseDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of formal issuance (e.g., publication) of the dataset." .
+<dct:releaseDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dct:releaseDate> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dct:releaseDate> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dct:spatialCoverage
+<dct:spatialCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dct:spatialCoverage> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dct:spatialCoverage> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial coverage of the dataset." .
+<dct:spatialCoverage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dct:spatialCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dct:spatialCoverage> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dct:temporalCoverage
+<dct:temporalCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dct:temporalCoverage> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dct:temporalCoverage> <http://www.w3.org/2000/01/rdf-schema#comment> "The temporal period that the dataset covers." .
+<dct:temporalCoverage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dct:temporalCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dct:temporalCoverage> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dct:title
+<dct:title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dct:title> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dct:title> <http://www.w3.org/2000/01/rdf-schema#comment> "A name given to the dataset." .
+<dct:title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dct:title> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dct:title> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# dct:updateDate
+<dct:updateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<dct:updateDate> <http://www.w3.org/2000/01/rdf-schema#domain> <dcat:Dataset> .
+<dct:updateDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Most recent date on which the dataset was changed, updated or modified." .
+<dct:updateDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<dct:updateDate> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<dct:updateDate> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/award
+<http://opencoredata.org/voc/csdco/v1/award> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/award> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Project> .
+<http://opencoredata.org/voc/csdco/v1/award> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/award> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/award> <http://www.w3.org/2000/01/rdf-schema#label> "award number" .
+<http://opencoredata.org/voc/csdco/v1/award> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/azimuth
+<http://opencoredata.org/voc/csdco/v1/azimuth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/azimuth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/azimuth> <http://www.w3.org/2000/01/rdf-schema#comment> "compass orientation of the borehole at start of drilling/coring, if not vertical" .
+<http://opencoredata.org/voc/csdco/v1/azimuth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/azimuth> <http://www.w3.org/2000/01/rdf-schema#label> "azimuth" .
+<http://opencoredata.org/voc/csdco/v1/azimuth> <http://www.w3.org/2000/01/rdf-schema#range> "float" .
+# 
+# http://opencoredata.org/voc/csdco/v1/comment
+<http://opencoredata.org/voc/csdco/v1/comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/comment> <http://www.w3.org/2000/01/rdf-schema#comment> "comment/note" .
+<http://opencoredata.org/voc/csdco/v1/comment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment" .
+<http://opencoredata.org/voc/csdco/v1/comment> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/country
+<http://opencoredata.org/voc/csdco/v1/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/country> <http://www.w3.org/2000/01/rdf-schema#comment> "country" .
+<http://opencoredata.org/voc/csdco/v1/country> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/country> <http://www.w3.org/2000/01/rdf-schema#label> "country" .
+<http://opencoredata.org/voc/csdco/v1/country> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/county_region
+<http://opencoredata.org/voc/csdco/v1/county_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/county_region> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/county_region> <http://www.w3.org/2000/01/rdf-schema#comment> "county or other defined region" .
+<http://opencoredata.org/voc/csdco/v1/county_region> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/county_region> <http://www.w3.org/2000/01/rdf-schema#label> "county_region" .
+<http://opencoredata.org/voc/csdco/v1/county_region> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/dataset
+<http://opencoredata.org/voc/csdco/v1/dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/dataset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/dataset> <http://www.w3.org/2000/01/rdf-schema#label> "dataset" .
+<http://opencoredata.org/voc/csdco/v1/dataset> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/date
+<http://opencoredata.org/voc/csdco/v1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/date> <http://www.w3.org/2000/01/rdf-schema#comment> "date of the start of drilling the borehole (date of spud)" .
+<http://opencoredata.org/voc/csdco/v1/date> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/date> <http://www.w3.org/2000/01/rdf-schema#label> "date" .
+<http://opencoredata.org/voc/csdco/v1/date> <http://www.w3.org/2000/01/rdf-schema#range> "date" .
+# 
+# http://opencoredata.org/voc/csdco/v1/dip
+<http://opencoredata.org/voc/csdco/v1/dip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/dip> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/dip> <http://www.w3.org/2000/01/rdf-schema#comment> "angle of the borehole at start of drilling/coring, relative to vertical" .
+<http://opencoredata.org/voc/csdco/v1/dip> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/dip> <http://www.w3.org/2000/01/rdf-schema#label> "dip" .
+<http://opencoredata.org/voc/csdco/v1/dip> <http://www.w3.org/2000/01/rdf-schema#range> "float" .
+# 
+# http://opencoredata.org/voc/csdco/v1/elevation
+<http://opencoredata.org/voc/csdco/v1/elevation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/elevation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/elevation> <http://www.w3.org/2000/01/rdf-schema#comment> "elevation above sea level at the ground surface, or water surface if standing water is present at the site" .
+<http://opencoredata.org/voc/csdco/v1/elevation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/elevation> <http://www.w3.org/2000/01/rdf-schema#label> "elevation" .
+<http://opencoredata.org/voc/csdco/v1/elevation> <http://www.w3.org/2000/01/rdf-schema#range> "float" .
+# 
+# http://opencoredata.org/voc/csdco/v1/expedition
+<http://opencoredata.org/voc/csdco/v1/expedition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/expedition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/expedition> <http://www.w3.org/2000/01/rdf-schema#comment> "facility unique identifier for the project" .
+<http://opencoredata.org/voc/csdco/v1/expedition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/expedition> <http://www.w3.org/2000/01/rdf-schema#label> "expedition" .
+<http://opencoredata.org/voc/csdco/v1/expedition> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/funding
+<http://opencoredata.org/voc/csdco/v1/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/funding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Project> .
+<http://opencoredata.org/voc/csdco/v1/funding> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/funding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/funding> <http://www.w3.org/2000/01/rdf-schema#label> "funding" .
+<http://opencoredata.org/voc/csdco/v1/funding> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/hole
+<http://opencoredata.org/voc/csdco/v1/hole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/hole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/hole> <http://www.w3.org/2000/01/rdf-schema#comment> "borehole drilled or cored; first hole at a site is A; next hole is B; etc." .
+<http://opencoredata.org/voc/csdco/v1/hole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/hole> <http://www.w3.org/2000/01/rdf-schema#label> "hole" .
+<http://opencoredata.org/voc/csdco/v1/hole> <http://www.w3.org/2000/01/rdf-schema#range> "char" .
+# 
+# http://opencoredata.org/voc/csdco/v1/holeid
+<http://opencoredata.org/voc/csdco/v1/holeid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/holeid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/holeid> <http://www.w3.org/2000/01/rdf-schema#comment> "facility unique indentifier for the borehole; a concatenation of /expedition, /locationid, YY, /site, and /hole" .
+<http://opencoredata.org/voc/csdco/v1/holeid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/holeid> <http://www.w3.org/2000/01/rdf-schema#label> "holeID" .
+<http://opencoredata.org/voc/csdco/v1/holeid> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/igsn
+<http://opencoredata.org/voc/csdco/v1/igsn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/igsn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/igsn> <http://www.w3.org/2000/01/rdf-schema#comment> "International Geo Sample Number; globally unique identifier for borehole" .
+<http://opencoredata.org/voc/csdco/v1/igsn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/igsn> <http://www.w3.org/2000/01/rdf-schema#label> "IGSN" .
+<http://opencoredata.org/voc/csdco/v1/igsn> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/location
+<http://opencoredata.org/voc/csdco/v1/location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/location> <http://www.w3.org/2000/01/rdf-schema#comment> "geographic feature name where drilling occurs" .
+<http://opencoredata.org/voc/csdco/v1/location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/location> <http://www.w3.org/2000/01/rdf-schema#label> "location" .
+<http://opencoredata.org/voc/csdco/v1/location> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/locationid
+<http://opencoredata.org/voc/csdco/v1/locationid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/locationid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/locationid> <http://www.w3.org/2000/01/rdf-schema#comment> "facility unique identifier for the location of drilling" .
+<http://opencoredata.org/voc/csdco/v1/locationid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/locationid> <http://www.w3.org/2000/01/rdf-schema#label> "locationID" .
+<http://opencoredata.org/voc/csdco/v1/locationid> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/locationtype
+<http://opencoredata.org/voc/csdco/v1/locationtype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/locationtype> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/locationtype> <http://www.w3.org/2000/01/rdf-schema#comment> "type of geographic feature drilled" .
+<http://opencoredata.org/voc/csdco/v1/locationtype> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/locationtype> <http://www.w3.org/2000/01/rdf-schema#label> "location type" .
+<http://opencoredata.org/voc/csdco/v1/locationtype> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/mblfb
+<http://opencoredata.org/voc/csdco/v1/mblfb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/mblfb> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/mblfb> <http://www.w3.org/2000/01/rdf-schema#comment> "geologic depth at bottom of borehole (total depth)" .
+<http://opencoredata.org/voc/csdco/v1/mblfb> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/mblfb> <http://www.w3.org/2000/01/rdf-schema#label> "total depth" .
+<http://opencoredata.org/voc/csdco/v1/mblfb> <http://www.w3.org/2000/01/rdf-schema#range> "float" .
+# 
+# http://opencoredata.org/voc/csdco/v1/mblft
+<http://opencoredata.org/voc/csdco/v1/mblft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/mblft> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/mblft> <http://www.w3.org/2000/01/rdf-schema#comment> "geologic depth at top of sample collection interval within borehole" .
+<http://opencoredata.org/voc/csdco/v1/mblft> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/mblft> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<http://opencoredata.org/voc/csdco/v1/mblft> <http://www.w3.org/2000/01/rdf-schema#range> "float" .
+# 
+# http://opencoredata.org/voc/csdco/v1/metadatasource
+<http://opencoredata.org/voc/csdco/v1/metadatasource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/metadatasource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/metadatasource> <http://www.w3.org/2000/01/rdf-schema#comment> "source of metadata about the borehole" .
+<http://opencoredata.org/voc/csdco/v1/metadatasource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/metadatasource> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata source" .
+<http://opencoredata.org/voc/csdco/v1/metadatasource> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/ngdc_comment
+<http://opencoredata.org/voc/csdco/v1/ngdc_comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_comment> <http://www.w3.org/2000/01/rdf-schema#comment> "concatenation of other columns" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_comment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_comment> <http://www.w3.org/2000/01/rdf-schema#label> "NGDC Comment" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_comment> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/ngdc_cruise
+<http://opencoredata.org/voc/csdco/v1/ngdc_cruise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_cruise> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_cruise> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_cruise> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_cruise> <http://www.w3.org/2000/01/rdf-schema#label> "NGDC Cruise" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_cruise> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/ngdc_sample
+<http://opencoredata.org/voc/csdco/v1/ngdc_sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_sample> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_sample> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_sample> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_sample> <http://www.w3.org/2000/01/rdf-schema#label> "NGDC Sample" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_sample> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/ngdc_serial
+<http://opencoredata.org/voc/csdco/v1/ngdc_serial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_serial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_serial> <http://www.w3.org/2000/01/rdf-schema#comment> "unique identifier used for borehole record at NOAA-NCEI Index to Marine and Lacustrine Geological Samples; will soon migrate to IGSN" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_serial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_serial> <http://www.w3.org/2000/01/rdf-schema#label> "NGDC Serial" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_serial> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/ngdc_ship
+<http://opencoredata.org/voc/csdco/v1/ngdc_ship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_ship> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_ship> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_ship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/ngdc_ship> <http://www.w3.org/2000/01/rdf-schema#label> "NGDC Ship" .
+<http://opencoredata.org/voc/csdco/v1/ngdc_ship> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/originalid
+<http://opencoredata.org/voc/csdco/v1/originalid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/originalid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/originalid> <http://www.w3.org/2000/01/rdf-schema#comment> "identifier assigned to the borehole in the field, during drilling, if different from facility unique identifier" .
+<http://opencoredata.org/voc/csdco/v1/originalid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/originalid> <http://www.w3.org/2000/01/rdf-schema#label> "originalID" .
+<http://opencoredata.org/voc/csdco/v1/originalid> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/pi
+<http://opencoredata.org/voc/csdco/v1/pi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/pi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Project> .
+<http://opencoredata.org/voc/csdco/v1/pi> <http://www.w3.org/2000/01/rdf-schema#comment> "investigators" .
+<http://opencoredata.org/voc/csdco/v1/pi> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/pi> <http://www.w3.org/2000/01/rdf-schema#label> "investigators" .
+<http://opencoredata.org/voc/csdco/v1/pi> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/platform
+<http://opencoredata.org/voc/csdco/v1/platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/platform> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/platform> <http://www.w3.org/2000/01/rdf-schema#comment> "vessel name or vessel type used to bring drilling equipment to the drilling site, or ground or ice surface if no vessel was used" .
+<http://opencoredata.org/voc/csdco/v1/platform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/platform> <http://www.w3.org/2000/01/rdf-schema#label> "platform" .
+<http://opencoredata.org/voc/csdco/v1/platform> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/platformname
+<http://opencoredata.org/voc/csdco/v1/platformname> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/platformname> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/platformname> <http://www.w3.org/2000/01/rdf-schema#comment> "platform/vessel name, if any, from which drilling occurs" .
+<http://opencoredata.org/voc/csdco/v1/platformname> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/platformname> <http://www.w3.org/2000/01/rdf-schema#label> "platform name" .
+<http://opencoredata.org/voc/csdco/v1/platformname> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/platformtype
+<http://opencoredata.org/voc/csdco/v1/platformtype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/platformtype> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/platformtype> <http://www.w3.org/2000/01/rdf-schema#comment> "type of platform from which drilling occurs" .
+<http://opencoredata.org/voc/csdco/v1/platformtype> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/platformtype> <http://www.w3.org/2000/01/rdf-schema#label> "platform type" .
+<http://opencoredata.org/voc/csdco/v1/platformtype> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/position
+<http://opencoredata.org/voc/csdco/v1/position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/position> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/position> <http://www.w3.org/2000/01/rdf-schema#comment> "description of the accuracy of the latitude and longitude values" .
+<http://opencoredata.org/voc/csdco/v1/position> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/position> <http://www.w3.org/2000/01/rdf-schema#label> "position" .
+<http://opencoredata.org/voc/csdco/v1/position> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/publications
+<http://opencoredata.org/voc/csdco/v1/publications> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/publications> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Project> .
+<http://opencoredata.org/voc/csdco/v1/publications> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/publications> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/publications> <http://www.w3.org/2000/01/rdf-schema#label> "publication" .
+<http://opencoredata.org/voc/csdco/v1/publications> <http://www.w3.org/2000/01/rdf-schema#range> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/sampletype
+<http://opencoredata.org/voc/csdco/v1/sampletype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/sampletype> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/sampletype> <http://www.w3.org/2000/01/rdf-schema#comment> "type of sample collected" .
+<http://opencoredata.org/voc/csdco/v1/sampletype> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/sampletype> <http://www.w3.org/2000/01/rdf-schema#label> "sample type" .
+<http://opencoredata.org/voc/csdco/v1/sampletype> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/site
+<http://opencoredata.org/voc/csdco/v1/site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/site> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/site> <http://www.w3.org/2000/01/rdf-schema#comment> "site within a location where drilling occurs, with lithology drilled expected to be the same for all holes drilled; first site is 1; next site is 2; etc." .
+<http://opencoredata.org/voc/csdco/v1/site> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/site> <http://www.w3.org/2000/01/rdf-schema#label> "site" .
+<http://opencoredata.org/voc/csdco/v1/site> <http://www.w3.org/2000/01/rdf-schema#range> "int" .
+# 
+# http://opencoredata.org/voc/csdco/v1/sitehole
+<http://opencoredata.org/voc/csdco/v1/sitehole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/sitehole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/sitehole> <http://www.w3.org/2000/01/rdf-schema#comment> "concatenation of /site and /hole" .
+<http://opencoredata.org/voc/csdco/v1/sitehole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/sitehole> <http://www.w3.org/2000/01/rdf-schema#label> "site and hole" .
+<http://opencoredata.org/voc/csdco/v1/sitehole> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/state_province
+<http://opencoredata.org/voc/csdco/v1/state_province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/state_province> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/state_province> <http://www.w3.org/2000/01/rdf-schema#comment> "state or province" .
+<http://opencoredata.org/voc/csdco/v1/state_province> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/state_province> <http://www.w3.org/2000/01/rdf-schema#label> "state_province" .
+<http://opencoredata.org/voc/csdco/v1/state_province> <http://www.w3.org/2000/01/rdf-schema#range> "string" .
+# 
+# http://opencoredata.org/voc/csdco/v1/waterdepthm
+<http://opencoredata.org/voc/csdco/v1/waterdepthm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://opencoredata.org/voc/csdco/v1/waterdepthm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://opencoredata.org/voc/csdco/v1/waterdepthm> <http://www.w3.org/2000/01/rdf-schema#comment> "water depth at hole, if standing water exists at the site" .
+<http://opencoredata.org/voc/csdco/v1/waterdepthm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://opencoredata.org/voc/csdco/v1> .
+<http://opencoredata.org/voc/csdco/v1/waterdepthm> <http://www.w3.org/2000/01/rdf-schema#label> "waterDepth" .
+<http://opencoredata.org/voc/csdco/v1/waterdepthm> <http://www.w3.org/2000/01/rdf-schema#range> "float" .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "latitude of the borehole top" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#range> "float" .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://opencoredata.org/voc/csdco/v1/Borehole> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "longitude of the borehole top" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#range> "float" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# dcat:Dataset
+<dcat:Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://opencoredata.org/voc/csdco/v1/Borehole
+<http://opencoredata.org/voc/csdco/v1/Borehole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://opencoredata.org/voc/csdco/v1/Project
+<http://opencoredata.org/voc/csdco/v1/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/Dataset
+<http://schema.org/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2002/07/owl#namedIndividual
+<http://www.w3.org/2002/07/owl#namedIndividual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://opencoredata.org/voc/csdco/v1/Borehole
+<http://opencoredata.org/voc/csdco/v1/Borehole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Borehole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+# 
+# http://opencoredata.org/voc/csdco/v1/CML
+<http://opencoredata.org/voc/csdco/v1/CML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/CML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/CML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/CML> <http://www.w3.org/2000/01/rdf-schema#comment> "Session file in XML format from Corelyzer software defining layout and position of cores and datasets; simplifies setup of project datasets in Corelyzer. The session file references the location of project core image files and numerical datafiles but does not include them in the session file, so file locations must be updated in the session file using a text editor for use on a new user's computer. Data files (.xml format) typically include Geotek MSCL-S and Geotek MSCL-XYZ data. Additional data such as XRF, loss-on ignition or other data sets may be included." .
+<http://opencoredata.org/voc/csdco/v1/CML> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/CML> <http://www.w3.org/2000/01/rdf-schema#label> "Corelyzer session file" .
+# 
+# http://opencoredata.org/voc/csdco/v1/Car
+<http://opencoredata.org/voc/csdco/v1/Car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/Car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Car> <http://www.w3.org/2000/01/rdf-schema#comment> "Packaged file generated by Corelyzer software that contains all core images and data for the project, allowing simplest setup of project datasets in Corelyzer. Data typically include Geotek MSCL-S and Geotek MSCL-XYZ data. Occasionally data from the scanning XRF, sample locations or other sources are included." .
+<http://opencoredata.org/voc/csdco/v1/Car> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/Car> <http://www.w3.org/2000/01/rdf-schema#label> "Corelyzer archive file" .
+# 
+# http://opencoredata.org/voc/csdco/v1/Charcoal
+<http://opencoredata.org/voc/csdco/v1/Charcoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Charcoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/Charcoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Charcoal> <http://www.w3.org/2000/01/rdf-schema#comment> "Sediment samples are treated with hydrogen peroxide to destroy most organic matter, \nleaving charcoal intact. Samples are passed through a 125 µm sieve and the >125 µm \nfraction is kept, dried onto a petri dish, and counted." .
+<http://opencoredata.org/voc/csdco/v1/Charcoal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/Charcoal> <http://www.w3.org/2000/01/rdf-schema#label> "charcoal" .
+# 
+# http://opencoredata.org/voc/csdco/v1/Coulometry
+<http://opencoredata.org/voc/csdco/v1/Coulometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Coulometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/Coulometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Coulometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Carbon coulometry measures the amount of carbon contained in lake sediments, either of organic or inorganic orgin, and thus allows one to examine changes in the chemical makeup of lake sediments through time. The carbon content of sediments can be related to a number of factors such as rates of decomposition, productivity, and/or precipitation of carbonate minerals. The LRC CO2 Coulometer can be used to rapidly determine carbon content from water, gas, or sediment samples." .
+<http://opencoredata.org/voc/csdco/v1/Coulometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/Coulometry> <http://www.w3.org/2000/01/rdf-schema#label> "Coulometry" .
+# 
+# http://opencoredata.org/voc/csdco/v1/DtubeMetadata
+<http://opencoredata.org/voc/csdco/v1/DtubeMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/DtubeMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/DtubeMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/DtubeMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/DtubeMetadata> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/DtubeMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/Grainsize
+<http://opencoredata.org/voc/csdco/v1/Grainsize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Grainsize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/Grainsize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Grainsize> <http://www.w3.org/2000/01/rdf-schema#comment> "Measures the particle size distribution of sediment samples using laser diffraction analysis" .
+<http://opencoredata.org/voc/csdco/v1/Grainsize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/Grainsize> <http://www.w3.org/2000/01/rdf-schema#label> "Grain Size" .
+# 
+# http://opencoredata.org/voc/csdco/v1/ICDFiles
+<http://opencoredata.org/voc/csdco/v1/ICDFiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/ICDFiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/ICDFiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/ICDFiles> <http://www.w3.org/2000/01/rdf-schema#comment> "PSICAT is a software application for lithologic descriptions of cores using a set of controlled vocabularies and patterns for lithologies. The PSICAT folders contain reduced core images, .xml files with core description notes." .
+<http://opencoredata.org/voc/csdco/v1/ICDFiles> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/ICDFiles> <http://www.w3.org/2000/01/rdf-schema#label> "Lithologic core description" .
+# 
+# http://opencoredata.org/voc/csdco/v1/Image
+<http://opencoredata.org/voc/csdco/v1/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Image> <http://www.w3.org/2000/01/rdf-schema#comment> "The Geotek MSCL-CIS (Core Imaging System) collects ultra high resolution images of core samples with a digital linescan camera. The light and camera lens have polarizing filters to reduce glare on the core surface in the image. Images resolution is specified by the user (25 to 100 micron pixel size, typically 50 micron)." .
+<http://opencoredata.org/voc/csdco/v1/Image> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/Image> <http://www.w3.org/2000/01/rdf-schema#label> "Geotek CIS (jpg)" .
+# 
+# http://opencoredata.org/voc/csdco/v1/LOI
+<http://opencoredata.org/voc/csdco/v1/LOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/LOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/LOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/LOI> <http://www.w3.org/2000/01/rdf-schema#comment> "Water, organic matter, carbonate mineral, and siliciclastic+diatom content are estimated by sequentially measuring weight loss in sediment core subsamples after heating at selected temperatures." .
+<http://opencoredata.org/voc/csdco/v1/LOI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/LOI> <http://www.w3.org/2000/01/rdf-schema#label> "Loss-on Ignition" .
+# 
+# http://opencoredata.org/voc/csdco/v1/Metadata
+<http://opencoredata.org/voc/csdco/v1/Metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/Metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Metadata> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/Metadata> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/Metadata> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/Project
+<http://opencoredata.org/voc/csdco/v1/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+# 
+# http://opencoredata.org/voc/csdco/v1/RGBData
+<http://opencoredata.org/voc/csdco/v1/RGBData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/RGBData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/RGBData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/RGBData> <http://www.w3.org/2000/01/rdf-schema#comment> "RGB color profiles from a strip through the middle of each core image generated by the MSCL-CIS." .
+<http://opencoredata.org/voc/csdco/v1/RGBData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/RGBData> <http://www.w3.org/2000/01/rdf-schema#label> "Geotek CIS (csv)" .
+# 
+# http://opencoredata.org/voc/csdco/v1/Radiographs
+<http://opencoredata.org/voc/csdco/v1/Radiographs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Radiographs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/Radiographs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/Radiographs> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital X-radiographic images at 16-bit grayscale density and 0.2mm resolution." .
+<http://opencoredata.org/voc/csdco/v1/Radiographs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/Radiographs> <http://www.w3.org/2000/01/rdf-schema#label> "X-radiographs" .
+# 
+# http://opencoredata.org/voc/csdco/v1/SRF
+<http://opencoredata.org/voc/csdco/v1/SRF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/SRF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/SRF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/SRF> <http://www.w3.org/2000/01/rdf-schema#comment> "Locations and information about samples that have been pulled from the cores." .
+<http://opencoredata.org/voc/csdco/v1/SRF> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/SRF> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+# 
+# http://opencoredata.org/voc/csdco/v1/SplitCoreData
+<http://opencoredata.org/voc/csdco/v1/SplitCoreData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/SplitCoreData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/SplitCoreData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/SplitCoreData> <http://www.w3.org/2000/01/rdf-schema#comment> "The Geotek MSCL-XYZ takes measurements along the split core surface by lowering sensors to the core. The XYZ measures high resolution magnetic susceptibility using a Bartington MS2E point sensor. Color reflectance data are collected using a Minolta CM-2600d color spectrophotometer. These measurements are collected at a specified interval (typically 0.5 cm). Up to 9 cores can be loaded at once, allowing for cores to be run unattended sequentially." .
+<http://opencoredata.org/voc/csdco/v1/SplitCoreData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/SplitCoreData> <http://www.w3.org/2000/01/rdf-schema#label> "Geotek MSCL-XYZ" .
+# 
+# http://opencoredata.org/voc/csdco/v1/WholeCoreData
+<http://opencoredata.org/voc/csdco/v1/WholeCoreData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/WholeCoreData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/WholeCoreData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/WholeCoreData> <http://www.w3.org/2000/01/rdf-schema#comment> "Geotek’s MSCL-S (standard multi sensor core logger) collects geophysical data along the length of the core using a suite of sensors. The parameters measured include P-wave velocity, gamma density, magnetic susceptibility, electrical resitivity, natural gamma. The core sections are pushed through the suite of sensors at a specified interval (typically 0.5 cm) and the core is scanned as it passes. The instrument can be configured to log whole or split cores. Core diameter can range from 5 to 15 cm with lengths up to 155 cm." .
+<http://opencoredata.org/voc/csdco/v1/WholeCoreData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/WholeCoreData> <http://www.w3.org/2000/01/rdf-schema#label> "Geotek MSCL-S" .
+# 
+# http://opencoredata.org/voc/csdco/v1/XRD
+<http://opencoredata.org/voc/csdco/v1/XRD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/XRD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/XRD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/XRD> <http://www.w3.org/2000/01/rdf-schema#comment> "Routine XRD-mineralogy profiles can provide qualitative and semiquantitative records of shifts in the source of sedimentary components to a lake sequence. XRD mainly displays information on autocthonous and authigenic minerals, but can give some indication of the abundance of amorphous silica phases. Set up with routine data collection, XRD is a rapid, accurate technique which can process 40 samples per day using an automated sample changer." .
+<http://opencoredata.org/voc/csdco/v1/XRD> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/XRD> <http://www.w3.org/2000/01/rdf-schema#label> "X-ray diffraction" .
+# 
+# http://opencoredata.org/voc/csdco/v1/XRF
+<http://opencoredata.org/voc/csdco/v1/XRF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/XRF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://opencoredata.org/voc/csdco/v1/XRF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#namedIndividual> .
+<http://opencoredata.org/voc/csdco/v1/XRF> <http://www.w3.org/2000/01/rdf-schema#comment> "Nondestructive analysis for concentrations of most elements from aluminum (atomic number 13) to uranium (92). Stratigraphic resolutions to 0.2mm are possible. Dwell time per sample point ranges from 1\nsecond for abundant elements to 2 minutes for trace elements. Typical scans are at 5 or 10mm stratigraphic resolution and 10 to 15 seconds per sample point." .
+<http://opencoredata.org/voc/csdco/v1/XRF> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dcat:Dataset" .
+<http://opencoredata.org/voc/csdco/v1/XRF> <http://www.w3.org/2000/01/rdf-schema#label> "Scanning XRF" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://opencoredata.org/voc/csdco/v1/Borehole> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://opencoredata.org/voc/csdco/v1/Borehole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "csdco:Borehole" .
+<http://opencoredata.org/voc/csdco/v1/Borehole> <http://www.w3.org/2000/01/rdf-schema#label> "CSDCO Borehole" .
+# 
+<http://opencoredata.org/voc/csdco/v1/Project> <http://www.w3.org/2000/01/rdf-schema#comment> "a collection of activities for a defined scientific goal and funded by the same source; can include expeditions, sample collection, new analyses of existing samples, or others" .
+<http://opencoredata.org/voc/csdco/v1/Project> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "schema:ResearchProject" .
+<http://opencoredata.org/voc/csdco/v1/Project> <http://www.w3.org/2000/01/rdf-schema#label> "CSDCO Project" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

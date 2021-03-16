@@ -16,7 +16,7 @@ $font-family-sans-serif: 'Ubuntu', "Helvetica Neue", Arial, "Noto Sans", sans-se
 $font-family-base: $font-family-sans-serif !default;
 
 $ocd-primary: #8c1d40; // ASU red
-$ocd-secondary: #ffc627;  // ASU yellow
+$ocd-secondary: #16348C;  // ASU yellow
 
 /* or, use an existing variable */
 $theme-colors: (
@@ -29,3 +29,8 @@ $theme-colors: (
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 // @import "bootstrap";
+
+
+a:hover {
+  color: none;
+}

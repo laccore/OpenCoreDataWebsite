@@ -2,7 +2,9 @@ import React, { useContext, useEffect, useState } from 'react'
 
 // import { makeStyles } from '@material-ui/core/styles'
 
-import { Alert, Link, List, ListItem, ListItemIcon, ListItemText, Box, Typography } from '@material-ui/core/'
+// import { Link } from 'react-router-dom';
+
+import { Alert, Avatar, Chip, Button, Fade, Link, List, ListItem, ListItemIcon, ListItemText, Modal, Typography } from '@material-ui/core/'
 
 import AssignmentIcon from '@material-ui/icons/Assignment'
 import DataUsageIcon from '@material-ui/icons/DataUsage'
@@ -21,7 +23,19 @@ export function AppSearchResults() {
 
     const [ searchState, searchDispatch ] = useContext(SearchContext)
 
-    const [ results, setResults ] = useState();
+    const [ results, setResults ] = useState()
+    const [ open, setOpen ] = useState(false)
+
+    const [ chosen, setChosen ] = useState(0)
+
+    const handleOpen = (item) => {
+        setOpen(true)
+        setChosen(item)
+    }
+    const handleClose = () => {
+        setOpen(false)
+        setChosen(0)
+    }
 
     useEffect(() => {
         if(searchState.results){
@@ -46,11 +60,12 @@ export function AppSearchResults() {
                         <List classes={{ root: classes.list}}>
                 
                             { (searchState.results.results.bindings).map((listItem, i) => 
-                                <ListItem key={`listItem-${i}`} className={ classes.listItem } button component={Link} href={`/${listItem.type.name}`}>
+                                <ListItem key={`listItem-${i}`} className={ classes.listItem } button onClick={() => handleOpen(i)}>
+                                     {/* component={ Link } to="/about" */}
                                     <ListItemIcon>
-                                        { (((listItem.type.value).toLowerCase()).includes('researchproject')) ? <LibraryBooksIcon /> : null }
-                                        { (((listItem.type.value).toLowerCase()).includes('dataset')) ? <DataUsageIcon /> : null }
-                                        { (((listItem.type.value).toLowerCase()).includes('digitaldocument')) ? <AssignmentIcon /> : null }
+                                        { (((listItem.type.value).toLowerCase()).includes('researchproject')) ? <LibraryBooksIcon color={'primary'} /> : null }
+                                        { (((listItem.type.value).toLowerCase()).includes('dataset')) ? <DataUsageIcon color={'primary'}/> : null }
+                                        { (((listItem.type.value).toLowerCase()).includes('digitaldocument')) ? <AssignmentIcon color={'primary'} /> : null }
                                     </ListItemIcon>
                                     <ListItemText 
                                         primary={`${listItem.name.value}`} 
@@ -60,6 +75,52 @@ export function AppSearchResults() {
                             )}
                         
                         </List> 
+
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                            classes={classes.modal}
+                            aria-labelledby="simple-modal-title"
+                            aria-describedby="simple-modal-description"
+                        >
+                            <Fade in={open}>
+                                <div className={classes.paperModal}>
+                                    <div id="score">
+                                        <Chip 
+                                            variant="outlined" 
+                                            color="primary" 
+                                            label={ results[chosen].score.value } 
+                                            avatar={<Avatar>S</Avatar>}
+                                        />
+                                    </div>
+                                    <br/>
+                                    <div id="name">
+                                        <Typography className={classes.title} color="primary" gutterBottom variant="h5" component="h4">
+                                            { results[chosen].name.value }
+                                        </Typography>
+                                    </div>
+                                    <hr/>
+                                    <div id="description">
+                                        <Typography variant="subtitle2" component="h6">
+                                            { results[chosen].description.value }
+                                        </Typography>
+                                    </div>
+                                    <hr/>
+                                    <div id="lit">
+                                        <Typography variant="body1" component="p">
+                                            { results[chosen].name.value }
+                                        </Typography>
+                                    </div>
+                                    <br/>
+                                    <div id="uri">
+                                        <Button type={'link'} fullWidth href={ results[chosen].type.value } variant="contained" color="primary">
+                                            { results[chosen].type.type }
+                                        </Button>
+                                    </div>
+                                    
+                                </div>
+                            </Fade>
+                        </Modal>
                     </>
                     : 
                     <Alert variant="filled" severity="info">
@@ -67,7 +128,7 @@ export function AppSearchResults() {
                     </Alert>
                 : null  
             }
-            
+
         </>
     )
 }
