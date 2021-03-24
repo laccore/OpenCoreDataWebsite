@@ -51,8 +51,12 @@ export const useStyles = makeStyles(theme => ({
     logo: {
       display: "inline-block",
       // [theme.breakpoints.down('xs')]: {
-      //   display: 'none',
+      //   display: 'none',i
       // },
+    },
+    logoPNG: {
+      maxWidth: '60px',
+      maxHeight: '60px'
     }
   }))
   

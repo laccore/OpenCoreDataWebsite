@@ -70,7 +70,7 @@ const IndexPage = () => {
   // }, [searchState])
 
   return (
-    <Layout>
+    <Layout header={'search'}>
         <Container maxWidth={'lg'}>
           <Box bgcolor={'white.main'} p={4} boxShadow={2} borderRadius={4} className={clsx(indexStyles.boxSearchResults)}>
             {/* {console.log(searchState)}

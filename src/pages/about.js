@@ -2,11 +2,14 @@ import * as React from "react"
 import clsx from "clsx"
 
 import Layout from '../layouts/index'
+import SEO from '../blocks/seo'
 // import Head from '../blocks/head'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import { Grid, Typography } from "@material-ui/core"
 import aboutStyles from './about.module.scss'
@@ -14,8 +17,13 @@ import aboutStyles from './about.module.scss'
 const AboutPage = ({ data }) => {
 
   return (
-    <Layout>
-      
+    <Layout header={'standard'} heading={'About'} subheading={'About the Open Core Data Project'}>
+      <SEO
+        title="About the Project"
+        description="Information about OCD."
+        image="/ocd-logo-gradient.png"
+        pathname="/about"
+      />
       <Container maxWidth={'lg'}>
 
          {/* ---- Features ---- */}
@@ -24,7 +32,22 @@ const AboutPage = ({ data }) => {
             { data.aboutJson.features.map(feature => 
               <Grid key={feature.name} item xs={12} sm={12} md={4} className={clsx(aboutStyles.gridItem)}>
                 <Box className={aboutStyles.gridItemInnerBox}>
-                  <img src={feature.image} className={clsx(`w-100`)}/>
+                  <figure className={aboutStyles.image}>
+                    {/* <Img 
+                      fluid={data.featureImg.childImageSharp.fluid} 
+                      alt={`image for ${feature.name}`}
+                    /> */}
+                    <StaticImage
+                      src={`${feature.image}`}
+                      alt={`${feature.name}`}
+                      placeholder={`${feature.title} image`}
+                      layout="fixed"
+                      width={200}
+                      height={200}
+                    />
+                  </figure>
+                  {/* <img src={`/images/${feature.image}`} className={clsx(`w-100`)}/> */}
+
                   <Typography variant={'h5'} component={'h3'} className={clsx('mb-2 text-center')}>
                     {feature.title}
                   </Typography>
@@ -88,31 +111,30 @@ const AboutPage = ({ data }) => {
 
 export default AboutPage
 
-
 export const query = graphql`
   query AboutJson {
-  aboutJson {
-    features {
-      name
-      image
-      title
-      subheading
-    }
-    reference {
-      name
-      title
-      content
-    }
-    mission {
-      name
-      title
-      content
-    }
-    architecture {
-      name
-      title
-      content
+    aboutJson {
+      features {
+        name
+        image
+        title
+        subheading
+      }
+      reference {
+        name
+        title
+        content
+      }
+      mission {
+        name
+        title
+        content
+      }
+      architecture {
+        name
+        title
+        content
+      }
     }
   }
-}
 `

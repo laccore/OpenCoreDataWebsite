@@ -2,19 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import clsx from 'clsx'
 
-import { makeStyles } from '@material-ui/core/styles'
-
-import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button'
 import { MemoAppToolbar } from '../components/appToolbar'
 import { AppSearchHead } from '../components/appSearchHead'
+import { AppStandardHead } from '../components/appStandardHead'
+import { isEmpty } from 'lodash'
 
-const Header = ({ siteMetadata, primaryNavigation }) => {
+const Header = ({ siteMetadata, primaryNavigation, type, heading, subheading }) => {
 
     return (
         <>
             <MemoAppToolbar menuItems={primaryNavigation} />
-            <AppSearchHead title={siteMetadata.title} />
+            { (type === "search") ? 
+                <AppSearchHead title={siteMetadata.title} heading={heading} subheading={subheading} />
+                : null 
+            }
+            { (type === "standard" || isEmpty(type) ) ? 
+                <AppStandardHead title={siteMetadata.title} heading={heading} subheading={subheading} />
+                : null 
+            }
         </>
     )
 }

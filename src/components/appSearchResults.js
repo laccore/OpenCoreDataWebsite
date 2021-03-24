@@ -113,8 +113,8 @@ export function AppSearchResults() {
                                     </div>
                                     <br/>
                                     <div id="uri">
-                                        <Button type={'link'} fullWidth href={ results[chosen].type.value } variant="contained" color="primary">
-                                            { results[chosen].type.type }
+                                        <Button type={'link'} fullWidth href={ results[chosen].s.value } variant="contained" color="primary">
+                                            { results[chosen].s.type }
                                         </Button>
                                     </div>
                                     

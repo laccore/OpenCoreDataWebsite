@@ -5,19 +5,19 @@
             {
                 "name": "organization",
                 "title": "Organization",
-                "image": "",
+                "image": "ocd-icon-ocd.png",
                 "subheading": "The sources for geodex comes mostly from collaboration with the EarthCube Council of Data Facilities (CDF).<a target='_blank' href='https://www.earthcube.org/group/council-data-facilities'>EarthCube Council of Data Facilities (CDF)</a>"
             },
             {
                 "name": "providers",
                 "title": "Providers",
-                "image": "",
+                "image": "ocd-icon-outsource.png",
                 "subheading": "CDF members who express their resources via structured data on the web approaches can be indexed."
             },
             {
                 "name": "indexing",
                 "title": "Indexing",
-                "image": "",
+                "image": "ocd-icon-aggregate.png",
                 "subheading": "Geodex uses the gleaner program (<a target='_blank' href='https://gleaner.io'>gleaner.io</a>) to build the index and (<a target='_blank' href='https://github.com/fils/goobjectweb/blob/master/docs/about.md'>GROW</a>) as a server."
             }
         ],

@@ -1,4 +1,4 @@
-import { queryToSearchParams } from '../queries/searchQueries'
+import { queryToSearchParams, queryForResearch } from '../queries/searchQueries'
 
 export const defaultSearch = (api, query) => {
 
@@ -26,6 +26,31 @@ export const defaultSearch = (api, query) => {
     }
 
     return { url, params, body} 
+}
+
+export const researchProjectSearch = (api, query) => {
+
+    // const { value, limit, offset } = query
+
+    // const url = new URL(api)
+    const url = new URL(`${api}/${query}`)
+    // const params = { query: queryForResearch(value, limit, offset)}
+    
+
+    // Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
+    
+    const body = {
+        method: 'GET',
+        //mode: 'no-cors', // no-cors, *cors, same-origin
+        // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        //credentials: 'omit', // include, *same-origin, omit
+        headers: {
+            'Accept': 'application/sparql-results+json',
+            'Content-Type': 'application/json'
+        }
+    }
+
+    return { url, body} 
 }
 
 export default { defaultSearch }
