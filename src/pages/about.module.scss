@@ -1,0 +1,25 @@
+.gridContainer{
+    & .gridItem {
+        justify-content: center;
+        align-items: center;
+        line-height: 1.25;
+        & .gridItemInnerBox{
+            padding: 3em;
+            min-height: 200px;
+        }
+    }
+}
+
+.sectionOuter {
+    min-height: 50vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.25;
+
+    & .sectionInner {
+        margin: auto;
+        max-width: 600px;
+    }
+
+}

@@ -1,0 +1,36 @@
+
+/* import the necessary Bootstrap files */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+/* -------begin customization-------- */   
+
+/* simply assign the value */ 
+// Override default variables before the import
+// $body-bg: #f1f1f1;
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'Dosis', sans-serif;
+// font-family: 'Quicksand', sans-serif;
+
+$font-family-sans-serif: 'Ubuntu', "Helvetica Neue", Arial, "Noto Sans", sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$ocd-primary: #8c1d40; // ASU red
+$ocd-secondary: #16348C;  // ASU yellow
+
+/* or, use an existing variable */
+$theme-colors: (
+  primary: $ocd-primary,
+  secondary: $ocd-secondary
+);
+
+/* -------end customization-------- */  
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+// @import "bootstrap";
+
+
+a:hover {
+  color: none;
+}
