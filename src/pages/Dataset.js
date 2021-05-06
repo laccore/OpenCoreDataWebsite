@@ -45,7 +45,7 @@ const DatasetPage = () => {
   return (
     <Layout>
         <Container maxWidth={'lg'}>
-          <Box bgcolor={'white.main'} p={0} boxShadow={2}>
+          <Box bgcolor={'inherit'} p={0} boxShadow={2}>
             
           </Box>
         </Container>

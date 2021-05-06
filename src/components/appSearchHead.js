@@ -6,7 +6,7 @@ import { useStyles } from './appSearchHead.style'
 
 import SearchIcon from '@material-ui/icons/Search';
 
-import {Box, Container, Divider, FormControl, IconButton, InputLabel, InputBase, MenuItem, Select, Paper, Typography } from '@material-ui/core/'
+import {Box, Button, Container, Divider, FormControl, Grid, IconButton, InputLabel, InputBase, MenuItem, Select, Paper, Typography } from '@material-ui/core/'
 
 import config from '../config'
 import { isEmpty } from 'lodash'
@@ -17,7 +17,7 @@ import { SearchContext } from '../contexts/searchContext'
 
 
 export const AppSearchHead = ({ title } ) => {
-  
+
   const classes = useStyles()
 
   const [ fetchState, fetchData ] = useFetchAPI()
@@ -67,45 +67,53 @@ export const AppSearchHead = ({ title } ) => {
           <Typography className={classes.heading} variant={'h3'} component={'h1'}>
               { title }
           </Typography>
-          <Box classes={{ root: classes.inputBox}}>
-            <InputBase
-              className={classes.inputBase}
-              placeholder={`Search ${title}`}
-              inputProps={{ 'aria-label': `search ${title}` }}
-              fullWidth
-              onChange={onSearchInput} />
+          {/* <Box className={classes.inputBox} display={'flex'} flexDirection={'column'} > */}
+            <Grid container spacing={0} className={classes.inputBox} >
+              <Grid item xs={10}>
+                <InputBase
+                  className={ classes.inputBase }
+                  placeholder={`Search ${title}`}
+                  fullWidth
+                  inputProps={{ 'aria-label': `search ${title}` }}
+                  onChange={onSearchInput} 
+                />
+              </Grid>
 
-            {/* <Divider className={classes.divider} orientation="vertical" /> */}
+              {/* <Divider className={classes.divider} orientation="vertical" /> */}
 
-            <FormControl classes={{ root: classes.formControl}}>
-              <Select
-                labelId="search-results-limit-select-label"
-                id="search-results-limit-select"
-                className={classes.inputSelect}
-                placeholder="10"
-                value={searchLimit}
-                onChange={onSearchLimit}
-              >
-                <MenuItem value={10}>10</MenuItem>
-                <MenuItem value={20}>20</MenuItem>
-                <MenuItem value={50}>50</MenuItem>
-                <MenuItem value={100}>100</MenuItem>
-              </Select>
-            </FormControl>
-            
-            {/* <Divider className={classes.divider} orientation="vertical" /> */}
+              {/* <FormControl classes={{ root: classes.formControl}}>
+                <Select
+                  labelId="search-results-limit-select-label"
+                  id="search-results-limit-select"
+                  className={classes.inputSelect}
+                  placeholder="10"
+                  value={searchLimit}
+                  onChange={onSearchLimit}
+                >
+                  <MenuItem value={10}>10</MenuItem>
+                  <MenuItem value={20}>20</MenuItem>
+                  <MenuItem value={50}>50</MenuItem>
+                  <MenuItem value={100}>100</MenuItem>
+                </Select>
+              </FormControl> */}
+              
+              {/* <Divider className={classes.divider} orientation="vertical" /> */}
+              <Grid item xs={2}>
+                <Button
+                  className={classes.button}
+                  color={'primary'}
+                  variant={'contained'}
+                  edge={'end'}
+                  fullWidth
+                  aria-label="search-results-submit"
+                  onClick={() => onSearchSubmit()}
+                >  
+                  <SearchIcon />
+                </Button>
+              </Grid>
+            </Grid>
 
-            <IconButton 
-              classes={{ root: classes.iconButton}}
-              color={'primary'}
-              aria-label="search-results-submit"
-              onClick={() => onSearchSubmit()}
-            >  
-              <SearchIcon />
-            </IconButton>
-            
-
-          </Box>
+          {/* </Box> */}
         </Box>
       </Box>
     </>

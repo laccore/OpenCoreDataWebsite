@@ -7,14 +7,19 @@ const theme = createMuiTheme({
             default: "#e7e7e7",
         },
         primary: {
-            main: "#8c1d40", // ASU red
-            light: lighten("#8c1d40", 0.02),
-            dark: darken("#8c1d40", 0.02)
+            main: "#2d7399", // Blue
+            light: lighten("#2d7399", 0.02),
+            dark: darken("#2d7399", 0.02)
         },
         secondary: {
-            main: "#16348C",  // Square complement, purple (from ASU red)
-            light: lighten("#16348C", 0.02),
-            dark: darken("#16348C", 0.02)
+            main: "#71b6ac",  // Green
+            light: lighten("#71b6ac", 0.02),
+            dark: darken("#71b6ac", 0.02)
+        },
+        tertiary: {
+            main: "#f8ce48",  // Yellow
+            light: lighten("#f8ce48", 0.02),
+            dark: darken("#f8ce48", 0.02)
         },
         error: {
             main: "#BF3617",
@@ -161,6 +166,30 @@ const theme = createMuiTheme({
                 }
             }
         },
+        MuiButton: {
+            colorPrimary: {
+                backgroundColor: "#2d7399",
+                '&:hover': {
+                    backgroundColor: darken("#2d7399", 0.02)
+                }
+            }
+        },
+        MuiIconButton: {
+            colorPrimary: {
+                '&:hover': {
+                    backgroundColor: darken("#2d7399", 0.02)
+                }
+            }
+        },
+        MuiListItem: {
+            button: {
+                '&:hover': {
+                    backgroundColor: lighten("#2d7399", 0.75),
+                    color: '#333333',
+                    fontWeight: 600
+                }
+            }
+        },
         MuiSvgIcon: {
             root: {
                 '&:hover':{
@@ -168,7 +197,7 @@ const theme = createMuiTheme({
                 }
             },
             colorPrimary: {
-                color: darken("#8c1d40", 0.02)
+                color: darken("#2d7399", 0.02)
             }
         }
     }

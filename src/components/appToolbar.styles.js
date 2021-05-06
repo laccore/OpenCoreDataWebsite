@@ -16,6 +16,9 @@ export const useStyles = makeStyles(theme => ({
         color: theme.palette.primary.dark
       }
     },
+    menuItemLink: {
+      color: theme.palette.primary.main,
+    },
     toolbar: {
       display: 'flex',
       alignItems: 'center',
@@ -53,6 +56,10 @@ export const useStyles = makeStyles(theme => ({
       // [theme.breakpoints.down('xs')]: {
       //   display: 'none',i
       // },
+    },
+    logoSVG: {
+      maxWidth: '60px',
+      maxHeight: '60px'
     },
     logoPNG: {
       maxWidth: '60px',

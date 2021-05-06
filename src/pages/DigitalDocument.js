@@ -48,7 +48,7 @@ const DigitalDocumentPage = () => {
   return (
     <Layout>
         <Container maxWidth={'lg'}>
-          <Box bgcolor={'white.main'} p={4} boxShadow={1}>
+          <Box bgcolor={'inherit'} p={4} boxShadow={1}>
             <Card className={classes.digitalDocumentRoot} variant="outlined">
               <CardContent>
                 <Chip label={`${ data.lit }`} variant="outlined" />

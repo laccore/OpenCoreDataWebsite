@@ -1,13 +1,10 @@
-import { makeStyles, lighten } from '@material-ui/core/styles'
+import { makeStyles, lighten, hexToRgb } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
     },
     inputBox: {
-        display: 'flex',
-        flexDirection: 'row',
-        width: '100%',
         maxWidth: '480px',
         backgroundColor: theme.palette.white.main,
         borderRadius: `4px`,
@@ -15,13 +12,22 @@ export const useStyles = makeStyles(theme => ({
         margin: `${theme.spacing(1)}px auto`,
         contain: 'content'
     },
+    inputBase: {
+        padding: theme.spacing(1),
+    },
+    button: {
+        borderRadius: 0,
+        height: '100%'
+        // backgroundColor: lighten(theme.palette.primary.light, 0.75)
+    },
     heading: {
         color: theme.palette.white.main,
-        margin: `${theme.spacing(1)}px 0`
+        margin: `${theme.spacing(1)}px 0`,
+        textShadow: `0 0 0.065em rgb(0 0 0 / 65%)`
     },
     backdrop: {
         // backgroundColor: 'rgb(255,255,255)',
-        background: 'linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(140,29,64,1) 30%, rgba(71,13,31,1) 100%)',
+        background: `linear-gradient(0deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 30%, ${theme.palette.tertiary.main} 100%)`,
         minHeight: '280px',
         display: 'flex',
         justifyContent: 'center',
@@ -58,31 +64,10 @@ export const useStyles = makeStyles(theme => ({
         alignItems: 'center',
         width: '100%',
         maxWidth: '480px'
-    },
-    input: {
-        marginLeft: theme.spacing(1),
-        flex: 1,
-    },
-    iconButton: {
-        borderRadius: 0,
-        flexShrink: 2,
-        width: '100%',
-        height: '100%',
-        backgroundColor: lighten(theme.palette.primary.light, 0.75)
-    },
-    inputFieldBox: {
-        backgroundColor: theme.palette.grey[100],
-        boxShadow: theme.shadows[1]
-    },
+    }, 
     divider: {
         height: '40px',
         margin: 'auto'
-    },
-    inputBase: {
-        padding: theme.spacing(1),
-        flexShrink: 1,
-        width: '100%',
-        height: '100%'
     },
     formControl: {
         // padding: theme.spacing(2),
@@ -95,11 +80,8 @@ export const useStyles = makeStyles(theme => ({
         minWidth: '80px',
         padding: theme.spacing(1)
     },
-    list: {
-        padding: 0    
-    },
-    listItem: {
-        padding: `${theme.spacing(2)} ${theme.spacing(2)}`
-        // borderBottom: '1px solid rgba(0,0,0,0.1)'
+    inputFieldBox: {
+        backgroundColor: theme.palette.grey[100],
+        boxShadow: theme.shadows[1]
     }
 }));

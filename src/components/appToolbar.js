@@ -8,8 +8,8 @@ import IconButton from '@material-ui/core/IconButton'
 
 import { useStyles } from './appToolbar.styles'
 
-// import { MainLogo } from '../styles/custom-svgs'
-import MainLogo from '../images/ocd-logo-gradient-borderless.png'
+import { MainLogo } from '../styles/custom-svgs'
+// import MainLogo from '../images/ocd-logo-gradient-borderless.png'
 
 // import { MemoSimpleNavigation } from '../'
 
@@ -22,8 +22,8 @@ export const AppToolbar = ({ menuItems }) => {
       <Toolbar className={classes.toolbar}> 
         <Box p={1} className={''} justifyContent="left">
           <a href={`/`} className={classes.logo}>
-            {/* <MainLogo className={classes.logoSVG} /> */}
-            <img alt={`application logo`} className={classes.logoPNG} src={ MainLogo } width='100%' height='100%' mx='auto'/>
+            <MainLogo className={classes.logoSVG} color={'primary'}/>
+            {/* <img alt={`application logo`} className={classes.logoPNG} src={ MainLogo } width='100%' height='100%' mx='auto'/> */}
           </a>
         </Box>
         
@@ -31,8 +31,8 @@ export const AppToolbar = ({ menuItems }) => {
           <nav className={clsx('navbar')}>
             <ul className={clsx('navbar-nav')}>
               { menuItems.map(menuItem => 
-                <li keyl={menuItem.node.name} className={clsx('nav-item p-0 mx-2')}>
-                  <a href={menuItem.node.slug} className={clsx('text-primary')}>
+                <li key={menuItem.node.name} className={clsx('nav-item p-0 mx-2')}>
+                  <a href={menuItem.node.slug} className={clsx(classes.menuItemLink)}>
                       {(menuItem.node.name).toUpperCase()}
                   </a>
                 </li>

@@ -21,7 +21,10 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         maxWidth: '80%',
         margin: '0 auto',
-        padding: '0'
+        padding: '0',
+        '&:hover': {
+            backgroundColor: darken("#2d7399", 0.02)
+        }
     },
     listItemRoot: {
         padding: theme.spacing(2),
@@ -43,11 +46,26 @@ export function SimpleList({listItems}) {
         
             <List classes={{ root: classes.listRoot}}>
                 {(listItems).map(listItem => 
-                <ListItem key={`${listItem.node.type.name}`} className={ classes.listItemRoot } button component={Link} href={`/${listItem.node.type.name}`}>
+                <ListItem 
+                    key={`${listItem.node.type.name}`} 
+                    className={ classes.listItemRoot } 
+                    button 
+                    color={'primary.main'}
+                    component={Link} 
+                    href={`/${listItem.node.type.name}`}>
                     <ListItemIcon>
-                        { (listItem.node.type.name == 'ResearchProject') ? <LibraryBooksIcon /> : null }
-                        { (listItem.node.type.name == 'Dataset') ? <DataUsageIcon /> : null }
-                        { (listItem.node.type.name == 'DigitalDocument') ? <AssignmentIcon /> : null }
+                        { (listItem.node.type.name == 'ResearchProject') 
+                            ? <LibraryBooksIcon color={'primary.main'}/> 
+                            : null 
+                        }
+                        { (listItem.node.type.name == 'Dataset') 
+                            ? <DataUsageIcon color={'primary.main'}/> 
+                            : null 
+                        }
+                        { (listItem.node.type.name == 'DigitalDocument') 
+                            ? <AssignmentIcon color={'primary.main'}/> 
+                            : null 
+                        }
                     </ListItemIcon>
                     <ListItemText 
                         primary={`${listItem.node.name}`} 

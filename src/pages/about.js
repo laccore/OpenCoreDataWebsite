@@ -27,7 +27,7 @@ const AboutPage = ({ data }) => {
       <Container maxWidth={'lg'}>
 
          {/* ---- Features ---- */}
-        <Box bgcolor={'white.main'} p={2} boxShadow={2}>
+        <Box bgcolor={'inherit'} p={2} boxShadow={2}>
           <Grid container className={clsx(aboutStyles.gridContainer)}>
             { data.aboutJson.features.map(feature => 
               <Grid key={feature.name} item xs={12} sm={12} md={4} className={clsx(aboutStyles.gridItem)}>
@@ -37,14 +37,14 @@ const AboutPage = ({ data }) => {
                       fluid={data.featureImg.childImageSharp.fluid} 
                       alt={`image for ${feature.name}`}
                     /> */}
-                    <StaticImage
+                    {/* <StaticImage
                       src={`${feature.image}`}
                       alt={`${feature.name}`}
                       placeholder={`${feature.title} image`}
                       layout="fixed"
                       width={200}
                       height={200}
-                    />
+                    /> */}
                   </figure>
                   {/* <img src={`/images/${feature.image}`} className={clsx(`w-100`)}/> */}
 
@@ -75,7 +75,7 @@ const AboutPage = ({ data }) => {
         </Box>
 
         {/* ---- Mission ---- */}
-        <Box bgcolor={'white.main'} p={4} boxShadow={2} >
+        <Box bgcolor={'inherit'} p={4} boxShadow={2} >
           {data.aboutJson.mission.map(mis => 
             <Box className={clsx(aboutStyles.sectionOuter)}> 
               <Box className={clsx(aboutStyles.sectionInner)}>

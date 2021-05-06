@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 
 import config from '../config'
 
+import { Map } from 'react-leaflet'
+
+
 import { researchProjectSearch } from '../functions/searchFunctions'
 import useFetchAPI from '../hooks/useFetchAPI'
 // import { SearchContext } from '../contexts/searchContext'
@@ -20,15 +23,15 @@ import { isEmpty } from 'lodash'
 const resData = [ 'abstract', 'discipline', 'expedition', 'funding', 'investigators', 'lab', 'linktitle', 'linkurl', 'outreach', 'repository', 'startdate', 'status', 'technique']
 
 
-const ResearchProjectPage = () => {
+const ResearchProjectPage = (props) => {
   
   const [ fetchState, fetchData ] = useFetchAPI()
   // const [ searchState, searchDispatch ] = useContext(SearchContext)
 
   const [ searchResult, setSearchResult ] = useState({});
-  // const [ searchQuery, setSearchQuery ] = useState("");
-  // const [ searchLimit, setSearchLimit ] = useState(10);
-  // const [ searchOffset, setSearchOffset ] = useState(0);
+
+  const { options } = props
+
 
   const fetchQuery = () => {
     // const query = {
@@ -64,8 +67,17 @@ const ResearchProjectPage = () => {
   }, [])
 
   return (
-    <Layout header={`standard`} heading={'CSDCO Project'} subheading={searchResult.name}>
+    <Layout header={`search`} heading={'CSDCO Project'} subheading={searchResult.name}>
       <Container maxWidth={'lg'}>
+
+      {/* {(typeof window !== 'undefined') ?  */}
+        <Map >
+          {/* Map code goes here */}
+        </Map>
+        {/* : null 
+      } */}
+
+
         <Box bgcolor={'white.main'} p={4} boxShadow={1}>
 
         <List className={''}>
