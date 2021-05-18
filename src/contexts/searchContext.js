@@ -1,22 +1,7 @@
-import React, { useReducer, createContext } from "react"
+import { useReducer, createContext } from "react"
 
-import { searchInitialState } from "../data/states/initialState"
-// import actions from "../../actions"
-// import C from "../../Constants"
-// import filterReducer from "../../Store"
-// import { useLocalStorage } from "../../hooks/useLocalStorage"
-
-function searchReducer(state, action){
-  switch (action.type) { 
-    case "SET_SEARCH_RESULTS":
-      return { ...state, results: action.results }
-    case "RESET_SEARCH_RESULTS":
-      return { ...state, results: [] }
-    default:
-    //   throw new Error('Unnexpected action')
-      return state
-  }
-} 
+import { searchInitialState } from "../assets/data/initialState"
+import { searchReducer } from "../reducers/searchReducer"
 
 const SearchContext = createContext([{}, () => {}])
 

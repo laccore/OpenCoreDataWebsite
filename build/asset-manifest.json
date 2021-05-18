@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/ocd-website-react/static/js/main.439ebcb9.chunk.js",
+    "main.js.map": "/ocd-website-react/static/js/main.439ebcb9.chunk.js.map",
+    "runtime-main.js": "/ocd-website-react/static/js/runtime-main.df9ac75e.js",
+    "runtime-main.js.map": "/ocd-website-react/static/js/runtime-main.df9ac75e.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/ocd-website-react/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.7705b6fb.chunk.js": "/ocd-website-react/static/js/2.7705b6fb.chunk.js",
+    "static/js/2.7705b6fb.chunk.js.map": "/ocd-website-react/static/js/2.7705b6fb.chunk.js.map",
+    "index.html": "/ocd-website-react/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/ocd-website-react/static/css/2.4c97ca4f.chunk.css.map",
+    "static/js/2.7705b6fb.chunk.js.LICENSE.txt": "/ocd-website-react/static/js/2.7705b6fb.chunk.js.LICENSE.txt",
+    "static/media/ocd-icon-aggregate.717eb334.png": "/ocd-website-react/static/media/ocd-icon-aggregate.717eb334.png",
+    "static/media/ocd-icon-cdf.62d6806f.png": "/ocd-website-react/static/media/ocd-icon-cdf.62d6806f.png",
+    "static/media/ocd-icon-outsource.140232c7.png": "/ocd-website-react/static/media/ocd-icon-outsource.140232c7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df9ac75e.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.7705b6fb.chunk.js",
+    "static/js/main.439ebcb9.chunk.js"
+  ]
+}

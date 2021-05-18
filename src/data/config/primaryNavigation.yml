@@ -1,9 +1,0 @@
-- name: about
-  slug: /about
-  title: about
-  display: true
-
-- name: home
-  slug: /
-  title: home
-  display: false

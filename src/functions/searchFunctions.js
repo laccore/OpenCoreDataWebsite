@@ -1,15 +1,10 @@
 import { queryToSearchParams, queryForResearch } from '../queries/searchQueries'
 
-export const defaultSearch = (api, query) => {
+export const defaultSearch = (endpoint, query) => {
 
     const { value, limit, offset } = query
-    // let test = { // pass from input... DELETE!
-    //     query: "CO2",
-    //     limit: 10,
-    //     offset: 1
-    // }
 
-    const url = new URL(api)
+    const url = new URL(endpoint)
     const params = { query: queryToSearchParams(value, limit, offset)}
     
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
@@ -28,12 +23,12 @@ export const defaultSearch = (api, query) => {
     return { url, params, body} 
 }
 
-export const researchProjectSearch = (api, query) => {
+export const componentSearch = (endpoint, query) => {
 
     // const { value, limit, offset } = query
 
-    // const url = new URL(api)
-    const url = new URL(`${api}/${query}`)
+    // const url = new URL(endpoint)
+    const url = new URL(`${endpoint}/${query}`)
     // const params = { query: queryForResearch(value, limit, offset)}
     
 
