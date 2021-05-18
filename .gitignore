@@ -58,6 +58,7 @@ typings/
 .cache/
 public
 build
+build/static
 
 # Mac files
 .DS_Store
@@ -70,3 +71,6 @@ yarn-error.log
 .yarn-integrity
 *.ai
 *.ai
+
+build/asset-manifest.json
+build/index.html
