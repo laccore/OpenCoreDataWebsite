@@ -1,7 +1,7 @@
 {
-  "name": "ocd-website-react",
+  "name": "OpenCoreDataWebsite",
   "version": "0.1.0",
-  "homepage": "https://figueroadjuan.github.io/ocd-website-react",
+  "homepage": "https://laccore.github.io/OpenCoreDataWebsite/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -28,8 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "REACT_APP_ENV=deploy npm run build", 
-    "deploy": "REACT_APP_ENV=deploy gh-pages -d build" 
+    "predeploy": "REACT_APP_ENV=deploy npm run build",
+    "deploy": "REACT_APP_ENV=deploy gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
