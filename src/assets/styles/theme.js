@@ -8,7 +8,7 @@ const theme = createMuiTheme({
         },
         primary: {
             main: "#2d7399", // Blue
-            light: lighten("#2d7399", 0.02),
+            light: lighten("#2d7399", 0.2),
             dark: darken("#2d7399", 0.02)
         },
         secondary: {
@@ -172,12 +172,19 @@ const theme = createMuiTheme({
                 '&:hover': {
                     backgroundColor: darken("#2d7399", 0.02)
                 }
+            },
+            outlinedPrimary: {
+                // border: "1px solid #2d7399",
+                '&:hover': {
+                    backgroundColor: darken("#2d7399", 0.05),
+                    color: '#f1f1f1'
+                }
             }
         },
         MuiIconButton: {
             colorPrimary: {
                 '&:hover': {
-                    backgroundColor: darken("#2d7399", 0.02)
+                    backgroundColor: darken("#2d7399", 0.05)
                 }
             }
         },
@@ -209,6 +216,23 @@ const theme = createMuiTheme({
             },
             colorPrimary: {
                 color: darken("#2d7399", 0.02)
+            }
+        },
+        MuiSelect: {
+            icon: {
+                color: lighten("#2d7399", 0.2)
+            }
+        },
+        MuiMenu: {
+            list: {
+                padding: 0
+            }
+        },
+        MuiAccordion: {
+            root: {
+                '&.Mui-expanded': {
+                    margin: 0
+                }
             }
         },
         MuiAccordionDetails: {

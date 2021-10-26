@@ -56,36 +56,38 @@ export function MenuWebDrawer({drawer, toggleDrawer, pages}){
     return(
         <SwipeableDrawer
           anchor="left"
-          open={drawer}
-          onOpen={toggleDrawer(true)} 
-          onClose={toggleDrawer(false)} 
+          open={drawer['web']}
+          onOpen={toggleDrawer('web', true)} 
+          onClose={toggleDrawer('web', false)} 
           className={clsx(classes.drawer)}
         >
           <Box className={clsx(classes.toolbar, classes.drawer)} >
-              <Box textAlign="right">
-                  <IconButton onClick={toggleDrawer(false)}>
-                      {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                  </IconButton>
-              </Box>
-              <Box width="100%">
-                <List>
-                  { pages.map((item, i) => 
-                    <ListItem key={i} button component="a" href={item.path} disabled={item.disabled} className={classes.listItem}>
-                        {(item.icon) ?
-                            <ListItemIcon>
-                            <item.icon/>
-                            </ListItemIcon>
-                            : null }
-                        <ListItemText primary={
-                            <Typography variant="h6" component="h6">
-                                {(item.name).toUpperCase()}
-                            </Typography>
-                        } className={classes.listItem}  />
-                    </ListItem>
-                  )}
-                </List>
-              </Box>
+            <Box textAlign="right" display={'flex'} justifyContent={'flex-end'}>
+              <IconButton onClick={toggleDrawer('web', false)} color={'primary'}>
+                {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+              </IconButton>
             </Box>
+            <Box width="100%">
+              <List>
+                { pages.map((page, i) => 
+                  (!page.disabled && 
+                    <ListItem key={i} button component="a" href={page.path} disabled={page.disabled} className={classes.listItem}>
+                      {(page.icon) ?
+                        <ListItemIcon>
+                          <page.icon/>
+                        </ListItemIcon>
+                      : null }
+                      <ListItemText primary={
+                        <Typography variant="h6" component="h6">
+                            {(page.name).toUpperCase()}
+                        </Typography>
+                      } className={classes.listItem}  />
+                    </ListItem>
+                  )
+                )}
+              </List>
+            </Box>
+          </Box>
         </SwipeableDrawer>
     )
   }

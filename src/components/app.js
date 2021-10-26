@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import clsx from 'clsx'
 
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
+
 import { useStyles } from './app.styles'
 import {Box, Container, Breadcrumbs, Link, Typography } from '@material-ui/core/'
 
@@ -39,7 +42,6 @@ import { LoadingProvider } from '../contexts/loadingContext'
 // Functions:
 // ----------
 
-
 export const App = (props) => {
 
   const classes = useStyles()
@@ -47,7 +49,7 @@ export const App = (props) => {
 
   return ( 
     <Router
-      basename={`${(env.github_homepage) ? `${env.github_homepage}` : ''}`}     
+      // basename={`${(env.github_homepage) ? `${env.github_homepage}` : ''}`}     
     > 
       <ErrorsProvider>
       <LoadingProvider>

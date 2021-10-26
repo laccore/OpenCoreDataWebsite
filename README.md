@@ -1,6 +1,6 @@
-# Open Core Data - Search Web App
-This repository is the home for the Open Core Data (OCD) Website generated in ReactJS. 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), specifications below:
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

@@ -1,5 +1,4 @@
 export const updateName = (name) => {
-    console.log(name)
     let newName = ''
     if( (name.toLowerCase()).includes('dataset') || (name.toLowerCase()).includes('package') ) {
         newName = 'File Package'
@@ -11,4 +10,9 @@ export const updateName = (name) => {
         newName = name
     }
     return newName 
+}
+
+export const splitUrlPathname = (url) => {
+    let newUrl = new URL(url)
+    return (newUrl.pathname) ? newUrl.pathname.split('/') : []
 }

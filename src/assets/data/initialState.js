@@ -18,5 +18,6 @@ export const errorsInitialState = {
 }
 
 export const loadingInitialState = {
-    searchLoading: false
+    searchLoading: false,
+    filtersLoading: false
 }

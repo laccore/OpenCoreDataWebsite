@@ -75,7 +75,7 @@ const Header = ({ env, assets, pages }) => {
 
     return (
         <>
-            <MemoAppToolbar env={env} menuItems={pages} />
+            <MemoAppToolbar env={env} pages={pages} />
             <AppSearchHead env={env} />
         </>
     )

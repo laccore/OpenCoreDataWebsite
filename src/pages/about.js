@@ -9,9 +9,7 @@ import { aboutContent } from '../assets/data/pageContent'
 // ------------------------
 // Assets
 // ------------------------
-import OutsourceIconPNG from '../assets/icons/ocd-icon-outsource.png'  // convert to SVG icon
-import AggregateIconPNG from '../assets/icons/ocd-icon-aggregate.png' // convert to SVG icon
-import CDFIconPNG from '../assets/icons/ocd-icon-cdf.png' // convert to SVG icon
+import { OutsourceIcon, CDFIconIcon, AggregateIconIcon } from '../assets/styles/custom-svgs'  // convert to SVG icon
 
 // ------------------------
 // Styles
@@ -25,19 +23,13 @@ export const About = () => {
   const classes = useStyles()
 
   return(
-        <Box p={4} bgcolor={"white.main"} boxShadow={2}>
-            <Grid container>
-                <Grid xs={12} sm={4} item key={'icon-1'}>
-                    <img src={OutsourceIconPNG} className={classes.gridItemIcon}></img>
-                </Grid>
-                <Grid xs={12} sm={4} item key={'icon-1'}>
-                    <img src={AggregateIconPNG} className={classes.gridItemIcon}></img>
-                </Grid>
-                <Grid xs={12} sm={4} item key={'icon-1'}>
-                    <img src={CDFIconPNG} className={classes.gridItemIcon}></img>
-                </Grid>
-            </Grid>
-            <Box p={4}>
+        <Box p={4} bgcolor={"white.main"} boxShadow={2} height={'100%'} minHeight={'50vmin'}>
+            <Box p={0} textAlign={'center'}>
+                <Typography variant={'h4'} component={'h3'} color={'grey.900'} gutterBottom>
+                    About Us
+                </Typography>
+            </Box>
+            <Box p={0}>
                 <Typography variant={'body1'} component={'div'} color={'grey.400'}>
                     <div dangerouslySetInnerHTML={{ __html: aboutContent }} />
                 </Typography>

@@ -17,9 +17,9 @@ import { useStyles } from './home.styles.js'
 // Configuration
 // ------------------------
 import config from '../config'
-import { arrayIsEmpty, checkFor, convertFromCamelCase } from '../functions/formatFunctions'
-import { componentSearch } from '../functions/searchFunctions'
-import { capitalize, isEmpty } from "lodash"
+import { arrayIsEmpty, checkFor, convertFromCamelCase, capitalize, isObjEmpty } from '../functions/formatFunctions'
+import { digitalObjectSearch } from '../functions/searchFunctions'
+import { isEmpty } from "lodash"
 
 // ------------------------
 // Context/hooks
@@ -48,30 +48,56 @@ export const DigitalObject = (props) => {
     
     const { page, env, match } = props
        
-    const [ content, setContent ] = useState({});
+    const [ content, setContent ] = useState(null);
   
+    const component = (page.path).split('/').filter(q => q != "")[0]
+    const id = match.params.id
+    const query = `${component}/${id}`
+    
+    const handleDownload = (url) => {
+        
+        console.log(url)
+    }
+
+    // ------------------------------
+    // Set digital object content:
+    // ------------------------------
     useEffect(() => {
-        if(!isEmpty(fetchState.data)){
-            setContent(fetchState.data)
+        if(!isObjEmpty(fetchState.data)){
+            console.log(fetchState)
+            if(fetchState.data.results.bindings.length > 0){
+                let currentResults = fetchState.data.results.bindings
+                let updatedContent = {}
+                
+                currentResults.forEach(option => {
+                    let currentKey = (option.p.value).replace('https://schema.org/','')
+                    updatedContent[currentKey] = {
+                        "schema": option.p.value,
+                        "value": option.o.value,
+                        "key": convertFromCamelCase(currentKey)
+                    }
+                })
+                // console.log(updatedContent)
+                setContent(updatedContent)
+            }
+        } else{
+            setContent(null)
         }
     }, [fetchState])
-    
+
     useEffect(() => {
         
         (async () => {
             if(match.params.id && !isEmpty(match.params.id)){
                 
-                let component = (page.path).split('/').filter(q => q != "")[0]
-                let id = match.params.id
-                let query = `${component}/${id}`
-
-              const {url, body} = componentSearch(env.ocd, query)
-              console.log(url, body)
-              await fetchData(url, body)
-            //   await fetchData(url, body)
-
+                const {url, context} = digitalObjectSearch(env.graph, id)
+                console.log(url, context)
+                
+                // await getContent(url, context)
+                await fetchData(url, context)
+                
             } else {
-                setContent(null)
+                setContent({})
             }
         
         })()
@@ -89,22 +115,35 @@ export const DigitalObject = (props) => {
                 borderRadius={4} 
                 // className={clsx(classes.boxSearchResults)}
             >   
-                { (content) ? 
+                { (!isObjEmpty(content)) ?
                     <>
                         {console.log(content)}
                         <Box p={4} justifyContent={'center'} alignItems={'center'} bgcolor={'grey.200'}>
-                            <Typography variant={'h5'} component={'h2'}>
-                                {content['name']}
-                            </Typography>
                             <Box py={1}>
-                                <Typography variant={'body2'} component={'p'} style={{ lineHeight: '1.6' }}>
-                                    {content['description']}
+                                <Typography variant={'h5'} component={'h2'}>
+                                    {content.name.value}
                                 </Typography>
                             </Box>
+                            <Box py={1}>
+                                <Chip 
+                                    variant={'outlined'}
+                                    color={'primary'}
+                                    label={content.encodingFormat.value} />
+                            </Box>
+
+                            <Box py={1}>
+                                <Typography variant={'body1'} component={'p'} style={{ lineHeight: '1.6' }}>
+                                    {content.description.value}
+                                </Typography>
+                            </Box>
+
                             <Box my={1}>
-                                <Button 
+                                <Button
                                     color={'primary'} 
                                     variant={'contained'} 
+                                    download={content.url.name}
+                                    // component={'a'}
+                                    onClick={handleDownload(content.url.value)}
                                 >
                                     Download
                                 </Button>
@@ -114,47 +153,57 @@ export const DigitalObject = (props) => {
                         
                         <Box >
                             <List component="ul" aria-label="download list">
-                                { (!arrayIsEmpty(content.resources)) ?
-                                    Object.entries(content.resources).map(([key,val]) => {
-                                        console.log(key,val)
-                                        return(
-                                            <ListItem 
-                                                key={`list-item-${val.name}`} 
-                                                divider 
-                                                // disableGutters
-                                                // style={{ padding: '8px 16px' }}    
-                                            >
-                                                <Chip
-                                                    variant={'outlined'}
-                                                    color={'primary'}
-                                                    label={val.mediatype}
-                                                    style={{ margin: '8px 16px'}}
-                                                >
-
-                                                </Chip>
-                                                <ListItemText primary={
-                                                    val.description
-                                                } />
-                                                <ListItemSecondaryAction>
-                                                    <IconButton 
-                                                        edge="end" 
-                                                        aria-label="download"
-                                                        color='primary'
-                                                        size='medium'
-                                                        download={val.path}
-                                                    >
-                                                        <GetAppIcon color={'primary'} />
-                                                    </IconButton>
-                                                </ListItemSecondaryAction>
-                                            </ListItem>
-                                        )
-                                    }) : null
+                                
+                                {(!isObjEmpty(content.dateCreated)) &&
+                                    <ListItem key={`list-item-${content.dateCreated.key}`} divider > 
+                                        <ListItemText 
+                                            primary={content.dateCreated.value} 
+                                            secondary={content.dateCreated.key}
+                                        />
+                                    </ListItem>
                                 }
+                                {(!isObjEmpty(content.isRelatedTo)) &&
+                                    <ListItem key={`list-item-${content.isRelatedTo.key}`} divider > 
+                                        <ListItemText 
+                                            primary={
+                                                <a href={`/res/${content.isRelatedTo.value}`} title='project related to'>
+                                                    {content.isRelatedTo.value}
+                                                </a>
+                                            }
+                                            secondary={content.isRelatedTo.key}
+                                        />
+                                    </ListItem>
+                                }
+                                {(!isObjEmpty(content.identifier)) &&
+                                    <ListItem key={`list-item-${content.identifier.key}`} divider > 
+                                        <ListItemText 
+                                            primary={content.identifier.value} 
+                                            secondary={content.identifier.key}
+                                        />
+                                    </ListItem>
+                                }
+                                {(!isObjEmpty(content.license)) &&
+                                    <ListItem key={`list-item-${content.license.key}`} divider > 
+                                        <ListItemText 
+                                            primary={
+                                                <a href={content.license.value} title='license information'>
+                                                    {content.license.value}
+                                                </a>
+                                            }
+                                            secondary={content.license.key} 
+                                        />
+                                    </ListItem>
+                                }
+                                
                             </List>
                         </Box>
                     </>
                     
-                : null }
+                : 
+                    <Alert severity={'error'}>
+                        'No file available for this ID.'
+                    </Alert>
+                }
             </Box>
         </>
     )

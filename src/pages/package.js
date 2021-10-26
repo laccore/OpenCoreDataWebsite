@@ -17,7 +17,7 @@ import { useStyles } from './home.styles.js'
 // Configuration
 // ------------------------
 import config from '../config'
-import { arrayIsEmpty, checkFor, convertFromCamelCase } from '../functions/formatFunctions'
+import { arrayIsEmpty, checkFor, convertFromCamelCase, isObjEmpty } from '../functions/formatFunctions'
 import { componentSearch } from '../functions/searchFunctions'
 import { capitalize, isEmpty } from "lodash"
 
@@ -89,7 +89,7 @@ export const Package = (props) => {
                 borderRadius={4} 
                 // className={clsx(classes.boxSearchResults)}
             >   
-                { (content) ? 
+                { (content && !isObjEmpty(content)) ? 
                     <>
                         <Box p={4} justifyContent={'center'} alignItems={'center'} bgcolor={'grey.200'}>
                             <Typography variant={'h5'} component={'h2'}>
@@ -153,7 +153,11 @@ export const Package = (props) => {
                         </Box>
                     </>
                     
-                : null }
+                : 
+                    <Alert severity={'error'}>
+                        'No package available for this identifier.'
+                    </Alert>
+                }
             </Box>
         </>
     )

@@ -4,7 +4,11 @@ export const useStyles = makeStyles((theme) => ({
     simpleListBox: {
         width: '100%',
         margin: '0 auto',
-        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(2),
+        backgroundColor: theme.palette.grey[200],
+    },
+    simpleListButton: {
+
     },
     list: {
         width: '100%',
@@ -39,4 +43,12 @@ export const useStyles = makeStyles((theme) => ({
         left: '50%',
         transform: 'translate(-50%, -50%)'
     },
+    sortFormSelect: {
+        padding: theme.spacing(1)
+    },
+    sortButton: {
+        borderTopLeftRadius: 0,
+        borderBottomLeftRadius: 0,
+        padding: theme.spacing(1)
+    }
 }))

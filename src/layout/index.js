@@ -10,7 +10,7 @@ import { QueryPrimaryNavigation } from '../queries/primaryNavigation'
 
 const Layout = (props) => {
     
-    const { header, heading, subheading } = props
+    const { header, heading, subheading, pages } = props
     const siteMetadata = QuerySiteMetadata()
     const primaryNavigation = QueryPrimaryNavigation()
     
@@ -22,6 +22,7 @@ const Layout = (props) => {
                 type={header}
                 heading={heading}
                 subheading={subheading}
+                pages={pages}
             />
             
             {props.children}

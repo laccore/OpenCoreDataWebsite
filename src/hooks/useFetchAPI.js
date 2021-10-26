@@ -17,10 +17,20 @@ const useFetchAPI = (initialUrl="", initialData=[]) => {
   //   fetchData()
   // }, [url])
 
-  const fetchData = async (url="", body={} ) => {
+  const fetchData = async (url="", context={} ) => {
     dispatch({ type: 'FETCH_INIT' })
     // try {
-      const request = await fetch(url, body)
+      const request = await fetch(url, {
+        method: (context.method) 
+          ? context.method 
+          : 'GET',
+        body: (context.body) 
+          ? context.body 
+          : null,
+        headers: (context.headers) 
+          ? context.headers 
+          : {"Content-type": "application/json; charset=UTF-8"}
+      })
       const response = await request
           .json()
           .then(res => { 

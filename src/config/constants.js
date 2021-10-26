@@ -13,8 +13,7 @@ const constants = {
     SITENAME: (process.env.REACT_APP_SITENAME) ? process.env.REACT_APP_SITENAME : 'Open Core Data',
     DOMAIN: (process.env.REACT_APP_DOMAIN) ? process.env.REACT_APP_DOMAIN : '',
     SHORTNAME: (process.env.REACT_APP_SHORTNAME) ? process.env.REACT_APP_SHORTNAME : 'ocd',
-    GITHUB_HOMEPAGE: (process.env.REACT_APP_GITHUB_HOMEPAGE) ? process.env.REACT_APP_GITHUB_HOMEPAGE : 'ocd-website-react'
-
+    GITHUB_HOMEPAGE: (process.env.REACT_APP_GITHUB_HOMEPAGE) ? process.env.REACT_APP_GITHUB_HOMEPAGE : ''
     
 }
 
